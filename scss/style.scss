@@ -1,0 +1,37 @@
+@import "../node_modules/bootstrap/scss/bootstrap.scss";
+
+
+body {
+    font-family: "Circular", sans-serif;
+    background-color: black;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+.grey-container {
+    background-color: #121212;
+    border-radius: 8px;
+    padding: 20px;
+    width: 280px;
+    a,.plus {
+        text-decoration: none;
+        color: grey;
+        &:hover {
+        color: white;
+        }
+    }
+}
+
+.bold {
+    font-weight: 700;
+    display: block;
+    span,i {
+        vertical-align: middle;
+    }
+} 
+
+.resize {
+    resize: horizontal;
+}
