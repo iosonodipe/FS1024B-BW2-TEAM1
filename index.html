@@ -1,14 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Spotify</title>
+    <link rel="stylesheet" href="./node_modules/bootstrap-icons/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="./node_modules/bootstrap/dist/css/bootstrap.min.css">
 </head>
+
 <body>
-    <div class="side-left">
+    <div class="side-left position-fixed start-0 top-0">
         <div class="container">
-            <div class="main-menu">'
+            <div class="main-menu">
                 <ul>
                     <li class="main-menu-home">
                         <a href="">
@@ -26,67 +30,132 @@
             </div>
             <div class="playlist-menu">
                 <div class="playlist-menu-library">
-                    <div class="text">
-                        <i class="bi bi-collection-fill"></i>
-                        <span>Your Library</span>
-                    </div>
-                    <div class="add">
+                    <div class="text d-flex justify-content-between">
+                        <div>
+                            <i class="bi bi-collection-fill"></i>
+                            <span>Your Library</span>
+                        </div>
                         <i class="bi bi-plus"></i>
                     </div>
                 </div>
-                <div class="playlist-menu-tags">
+                <div class="playlist-menu-tags d-flex gap-2 my-3">
                     <button id="playlist">Playlists</button>
                     <button id="artists">Artists</button>
                     <button id="albums">Albums</button>
                 </div>
-
             </div>
-            <div class="playlist-wrap">
-                <div class="playlists">
-                    <div class="element">
-                        <img src="./assets/imgs/main/image-1.jpg" alt="">
+            <div class="playlist-wrap w-100">
+                <div class="playlists d-flex flex-column gap-2">
+                    <div class="element d-flex gap-2">
+                        <img src="./assets/imgs/main/image-1.jpg" width="40px" alt="">
                         <div class="element-text">
                             <span>Liked Songs</span>
                             <div class="info">
-                                <span>Playlist • Utente</span>
+                                <span>Playlist • User</span>
                             </div>
                         </div>
                     </div>
-                    <div class="element">
-                        <img src="./assets/imgs/main/image-1.jpg" alt="">
+                    <div class="element d-flex gap-2">
+                        <img src="./assets/imgs/main/image-1.jpg" width="40px" alt="">
                         <div class="element-text">
                             <span>Liked Songs</span>
                             <div class="info">
-                                <span>Playlist • Utente</span>
+                                <span>Playlist • User</span>
                             </div>
                         </div>
                     </div>
-                    <div class="element">
-                        <img src="./assets/imgs/main/image-1.jpg" alt="">
+                    <div class="element d-flex gap-2">
+                        <img src="./assets/imgs/main/image-1.jpg" width="40px" alt="">
                         <div class="element-text">
                             <span>Liked Songs</span>
                             <div class="info">
-                                <span>Playlist • Utente</span>
+                                <span>Playlist • User</span>
                             </div>
                         </div>
                     </div>
-                    <div class="element">
-                        <img src="./assets/imgs/main/image-1.jpg" alt="">
+                    <div class="element d-flex gap-2">
+                        <img src="./assets/imgs/main/image-1.jpg" width="40px" alt="">
                         <div class="element-text">
                             <span>Liked Songs</span>
                             <div class="info">
-                                <span>Playlist • Utente</span>
+                                <span>Playlist • User</span>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-            <div class="player-wrap">
-                <div class="song"></div>
-                <div class="player"></div>
-                <div class="volume"></div>
+        </div>
+    </div>
+    <div class="container-fluid">
+        <div class="player-wrap d-flex position-fixed bottom-0 justify-content-between">
+            <div class="song d-flex">
+                <img src="./assets/imgs/main/image-10.jpg" width="60px" height="60px" alt="">
+                <div>
+                    <p>Song Title</p>
+                    <p>Artist</p>
+                </div>
+                <div>
+                    <i class="bi bi-heart"></i>
+                </div>
+            </div>
+            <div class="player">
+                <div>
+                    <button>
+                        <i class="bi bi-shuffle"></i>
+                    </button>
+                    <button>
+                        <i class="bi bi-skip-start-fill"></i>
+                    </button>
+                    <button>
+                        <i class="bi bi-play-circle-fill"></i>
+                    </button>
+                    <button>
+                        <i class="bi bi-skip-end-fill"></i>
+                    </button>
+                    <button>
+                        <i class="bi bi-arrow-repeat"></i>
+                    </button>
+                </div>
+                <div>
+                    <div class="progress" role="progressbar" aria-label="Basic example" aria-valuenow="75"
+                        aria-valuemin="0" aria-valuemax="100">
+                        <div class="progress-bar w-75"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="volume">
+                <button><i class="bi bi-mic"></i></button>
+                <button><i class="bi bi-view-list"></i></button>
+                <button><i class="bi bi-speaker"></i></button>
+                <button><i class="bi bi-volume-down"></i></button>
+                <button><i class="bi bi-arrows-angle-expand"></i></button>
             </div>
         </div>
     </div>
+
+    <div class="friends-activity position-fixed end-0">
+        <div class="friends-title">
+            <span>Attività amici</span>
+            <div>
+                <i class="bi bi-person-add"></i>
+                <i class="bi bi-x-lg"></i>
+            </div>
+        </div>
+        <div class="friends">
+            <div class="friend">
+                <img src="" alt="">
+                <div class="friend-info">
+                    <p>Nome Cognome</p>
+                    <p>Brano • Artista</p>
+                    <i class="bi bi-disc"></i><span>Xtreme</span>
+                </div>
+                <div class="friend-last-activity">
+                    4ore
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="./node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
 </body>
+
 </html>
