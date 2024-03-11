@@ -4,10 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "compile style": "sass assets/scss/style.scss assets/css/style.css -w",
-    "compile home": "sass assets/scss/home.scss assets/css/home.css -w",
-    "compile artist": "sass assets/scss/artist.scss assets/css/artist.css -w",
-    "compile album": "sass assets/scss/album.scss assets/css/album.css -w"
+    "compile": "sass assets/scss/style.scss assets/css/style.css -w"
   },
   "author": "",
   "license": "ISC",
