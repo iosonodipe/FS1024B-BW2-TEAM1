@@ -11847,6 +11847,7 @@ textarea.form-control-lg {
 body {
   font-family: "Circular", sans-serif;
   background-color: black;
+  color: white;
 }
 
 * {
@@ -11875,8 +11876,58 @@ body {
   vertical-align: middle;
 }
 
-.resize {
-  resize: horizontal;
+.pill {
+  background-color: #282828;
+  border: 0;
+  border-radius: 1rem;
+  padding: 4px 10px;
+  font-size: 0.9rem;
+  color: white;
+}
+.pill:hover {
+  background-color: #313031;
+}
+
+.playlist-library {
+  max-height: 533px;
+  overflow-y: scroll;
+}
+
+.playlist-image {
+  width: 50px;
+  border-radius: 3px;
+}
+
+.element {
+  padding: 6px;
+}
+.element:hover {
+  background-color: #313031;
+}
+.element .element-text span {
+  font-size: 1rem;
+}
+.element .element-text .info {
+  color: grey;
+  font-size: 0.8rem;
+}
+
+.music-player {
+  background-color: white;
+  height: 80px;
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #121212;
+}
+
+::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  background-color: grey;
 }
 
 /*# sourceMappingURL=style.css.map */
