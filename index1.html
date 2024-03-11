@@ -13,9 +13,9 @@
 <body>
 
 
-    <div class="row m-0">
-        <div class="col left-menu">
-            <div class="row flex-column p-2 resize">
+    <div class="row m-0 p-2 gap-2">
+        <div class="col-auto left-menu">
+            <div class="row flex-column resize">
                 <div class="col grey-container main-menu">
                     <div class="bold">
                         <a class="flex-bold" href=""><i class="bi bi-house-door h4 me-3"></i><span>Home</span></a>
@@ -129,12 +129,19 @@
                 </div>
             </div>
         </div>
-        <div class="col"></div>
+        <div class="col main-content grey-container">
+            <header class="row sticky-top">
+                <div class="col-6">
+                    <button><i class="bi bi-caret-left"></i></button>
+                    <button><i class="bi bi-caret-right"></i></button>
+                </div>
+                <div class="col-6"></div>
+            </header>
+        </div>
     </div>
 
 
-    <div class="music-player">
-
+    <div class="music-player sticky-bottom">
     </div>
 
     <script src="./js/script.js"></script>
