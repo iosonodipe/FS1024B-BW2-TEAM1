@@ -11851,6 +11851,7 @@ textarea.form-control-lg {
 }
 
 .background-artist {
+  background-image: url("../imgs/main/image-1.jpg");
   background-color: #0c67d3;
   background-size: cover;
   background-repeat: no-repeat;
