@@ -12022,17 +12022,22 @@ body {
   flex-direction: column;
   align-items: center;
 }
-.soundbarContainer .prodContainer svg {
-  margin-left: 10px;
-}
-.soundbarContainer .prodContainer .buttonProd {
+.soundbarContainer .prodContainer .buttonProd,
+.soundbarContainer .prodContainer .playBtn {
   background-color: transparent;
   border: none;
 }
-.soundbarContainer .prodContainer .buttonProd:hover {
+.soundbarContainer .prodContainer .buttonProd #iconBtn,
+.soundbarContainer .prodContainer .playBtn #iconBtn {
+  font-size: 25px;
+  align-items: end;
+}
+.soundbarContainer .prodContainer .buttonProd:hover,
+.soundbarContainer .prodContainer .playBtn:hover {
   transform: scale(1.14);
 }
-.soundbarContainer .prodContainer .buttonProd::after {
+.soundbarContainer .prodContainer .buttonProd::after,
+.soundbarContainer .prodContainer .playBtn::after {
   background-color: transparent;
   border: none;
 }
@@ -12041,6 +12046,25 @@ body {
   justify-content: center;
   align-items: center;
   margin-top: 4px;
+}
+.soundbarContainer .barContainer #progress {
+  width: 30rem;
+  height: 4px;
+  background: black;
+  border-radius: 10px;
+  cursor: pointer;
+  margin-left: 5px;
+  margin-right: 5px;
+}
+.soundbarContainer .barContainer #progress #progressed {
+  height: 4px;
+  background-color: #ffffff;
+  border-radius: 10px;
+  width: 0;
+}
+.soundbarContainer .barContainer #progress #progressed:hover {
+  background-color: rgb(0, 168, 0);
+  height: 4px;
 }
 .soundbarContainer .barContainer .minutes {
   color: white;
@@ -12055,6 +12079,7 @@ body {
 .soundbarContainer .asideContainer {
   display: flex;
   justify-content: end;
+  align-items: center;
 }
 .soundbarContainer .asideContainer .buttonProd {
   background-color: transparent;
