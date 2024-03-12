@@ -676,15 +676,15 @@
         <template id="artist">
             <div class="container-artist">
                 <div
-                    class="background-artist d-flex flex-column justify-content-end"
+                    id="artist-image" class="background-artist d-flex flex-column justify-content-end"
                 >
                     <div class="background-artist-text container-fluid px-4">
                         <p class="mb-0">
                             <i class="bi bi-patch-check-fill"></i> Artista
                             Verificato
                         </p>
-                        <h1>Yellowcard</h1>
-                        <p>333.679 ascoltatori mensili</p>
+                        <h1 id="artist-name">Yellowcard</h1>
+                        <p id="artist-fans">333.679 ascoltatori mensili</p>
                     </div>
                 </div>
                 <div class="artist-overview container-fluid px-4">
@@ -720,20 +720,21 @@
                                     <div
                                         class="d-flex align-items-center gap-2"
                                     >
-                                        <span>1</span>
+                                        <span class="track-rank">1</span>
                                         <img
+                                            class="track-image"
                                             src="./assets/imgs/main/image-1.jpg"
                                             width="40px"
                                             alt=""
                                         />
-                                        <p class="m-0">Title</p>
+                                        <p class="track-title m-0">Title</p>
                                     </div>
                                 </div>
                                 <div class="col-3 d-flex align-items-center">
-                                    <p class="m-0">459.454</p>
+                                    <p class="track-replays m-0">459.454</p>
                                 </div>
                                 <div class="col-3 d-flex align-items-center">
-                                    <p class="m-0">3:14</p>
+                                    <p class="track-duration m-0">3:14</p>
                                 </div>
                             </div>
                             <a href=""
@@ -749,15 +750,16 @@
                         >
                             <div class="d-flex align-items-center gap-2">
                                 <img
+                                    id="liked-image"
                                     src="./assets/imgs/main/image-10.jpg"
                                     class="liked-songs-image"
                                     alt=""
                                 />
                                 <div class="align-items-center">
-                                    <p class="m-0 fw-bold">
+                                    <p id="liked-song" class="m-0 fw-bold">
                                         Hai messo mi piace a 11 brani
                                     </p>
-                                    <p class="m-0">Di Yellowcard</p>
+                                    <p id="liked-artist" class="m-0">Di Yellowcard</p>
                                 </div>
                             </div>
                         </div>
