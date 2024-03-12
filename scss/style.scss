@@ -94,9 +94,12 @@ body {
 
 header{
     background-color: #66666A;
-    button{
+    .history-arrow{
         background-color: rgba($color: #3D3D3F, $alpha: 0.6);
         border-radius: 50%;
         border: none;
+    }
+    .install {
+        font-weight: 700;
     }
 }
