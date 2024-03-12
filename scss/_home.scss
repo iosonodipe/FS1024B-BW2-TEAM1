@@ -1,0 +1,41 @@
+.dinamic-content {
+    overflow-y: auto;
+    margin-top: 100px;
+}
+
+.goodnight-element {
+    background-color: rgba($color: #525254, $alpha: 0.5);
+    border-radius: 6px;
+    &:hover {
+        background-color: rgba($color: #6c6c6e, $alpha: 0.5);
+    }
+}
+
+.card {
+    border: none;
+    color: white;
+    background-color: #282828;
+    .card-title{
+        font-weight: bold;
+    }
+    .card-text{
+        font-size: 0.9rem;
+        color: gray;
+    }
+}
+
+.card-square{
+    padding: 15px;
+    text-align: center;
+    img{
+        border-radius: 10px;
+        max-width: 250px;
+    }
+}
+
+.card-circle{
+    padding: 15px;
+    img{
+        border-radius: 50%;
+    }
+}
