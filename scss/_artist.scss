@@ -1,5 +1,35 @@
 .background-artist{
-    background-image: url("../assets/imgs/main/image-10.jpg");
+    background-image: url("https://hips.hearstapps.com/hmg-prod/images/gettyimages-1188052265.jpg?crop=1xw:1.0xh;center,top&resize=640:*");
     background-size: cover;
+    background-repeat: no-repeat;
+    height: 40vh;
 }
-
+.background-artist-text{
+    h1{
+        font-size: 6rem;
+        font-weight: 900;
+        margin-bottom: 2rem;
+    }
+}
+.background-artist-text{
+    p{
+        i{
+            color: #0c67d3
+            ;
+        }
+    }
+}
+.follow-dots{
+    font-size: 2rem;
+    margin-left: 2rem;
+}
+.play-green{
+    color: #1ed760;
+    font-size: 3rem;
+    margin-right: 2rem;
+}
+.liked-songs-image{
+    width: 5rem;
+    height: 5rem;
+    border-radius: 50%;
+}
