@@ -251,7 +251,9 @@
                         </div>
                     </div>
                 </header>
-                
+                <div class="target-container">
+                    
+                </div>
             </div>
         </div>
 
@@ -470,6 +472,210 @@
                 </div>
             </div>
         </div>
+
+        <!-- TEMPLATES -->
+
+        <template id="home">
+            <div class="dinamic-content">
+                <div class="goodnight">
+                    <div class="row m-0 row-gap-3">
+                        <div class="col-sm-6 col-lg-3 px-3">
+                            <div
+                                class="goodnight-element mb-0 d-flex gap-2 align-items-center"
+                            >
+                                <img
+                                    class="goodnight-image rounded-start"
+                                    src="./assets/imgs/main/image-4.jpg"
+                                    alt=""
+                                    width="70px"
+                                />
+                                <div class="goodnight-text">
+                                    <span class="fw-bold">Liked Songs</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="artists px-3 mt-5">
+                    <div class="row row-gap-3">
+                        <h3 class="fw-bold">Artisti</h3>
+                        <div class="col-4 col-xl-2">
+                            <div class="card">
+                                <div class="card-circle">
+                                    <img
+                                        src="./assets/imgs/search/image-10.jpg"
+                                        class="card-img-top"
+                                        alt="..."
+                                    />
+                                </div>
+                                <div class="card-body">
+                                    <h6 class="card-title">Nome artista</h6>
+                                    <p class="card-text">Artista</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="albums px-3 my-5">
+                    <div class="row row-gap-3">
+                        <h3 class="fw-bold">Albums</h3>
+                        <div class="col-4 col-xl-2">
+                            <div class="card">
+                                <div class="card-square">
+                                    <img
+                                        src="./assets/imgs/search/image-10.jpg"
+                                        class="card-img-top"
+                                        alt="..."
+                                    />
+                                </div>
+                                <div class="card-body">
+                                    <h6 class="card-title">Nome album</h6>
+                                    <p class="card-text">Artista</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </template>
+
+        <template id="album">
+            <div>
+                <div class="container-info-album">
+                    <div class="row header-album d-flex align-items-end">
+                        <div class="col-auto">
+                            <img
+                                class="album-img"
+                                src="https://picsum.photos/200"
+                                alt=""
+                            />
+                        </div>
+                        <div class="col">
+                            <p class="m-0">Album</p>
+                            <h2 class="album-name">Nome Album</h2>
+                            <div class="d-flex gap-2 align-items-center">
+                                <span class=""><img src="" alt="" /></span>
+                                <span>Nome Artista</span>
+                                <span> • </span>
+                                <span>Anno Album</span>
+                                <span> • </span>
+                                <span>N brani, Totale Ascolto</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="mx-4 position-relative border-bottom pb-2">
+                    <div class="d-flex align-items-center gap-3 py-3">
+                        <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            width="48"
+                            height="48"
+                            fill="currentColor"
+                            class="bi bi-play-circle"
+                            viewBox="0 0 16 16"
+                        >
+                            <path
+                                d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14m0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16"
+                            />
+                            <path
+                                d="M6.271 5.055a.5.5 0 0 1 .52.038l3.5 2.5a.5.5 0 0 1 0 .814l-3.5 2.5A.5.5 0 0 1 6 10.5v-5a.5.5 0 0 1 .271-.445"
+                            />
+                        </svg>
+                        <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            width="24"
+                            height="24"
+                            fill="currentColor"
+                            class="bi bi-heart-fill"
+                            viewBox="0 0 16 16"
+                        >
+                            <path
+                                fill-rule="evenodd"
+                                d="M8 1.314C12.438-3.248 23.534 4.735 8 15-7.534 4.736 3.562-3.248 8 1.314"
+                            />
+                        </svg>
+                        <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            width="24"
+                            height="24"
+                            fill="currentColor"
+                            class="bi bi-arrow-down-circle"
+                            viewBox="0 0 16 16"
+                        >
+                            <path
+                                fill-rule="evenodd"
+                                d="M1 8a7 7 0 1 0 14 0A7 7 0 0 0 1 8m15 0A8 8 0 1 1 0 8a8 8 0 0 1 16 0M8.5 4.5a.5.5 0 0 0-1 0v5.793L5.354 8.146a.5.5 0 1 0-.708.708l3 3a.5.5 0 0 0 .708 0l3-3a.5.5 0 0 0-.708-.708L8.5 10.293z"
+                            />
+                        </svg>
+                        <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            width="24"
+                            height="24"
+                            fill="currentColor"
+                            class="bi bi-three-dots"
+                            viewBox="0 0 16 16"
+                        >
+                            <path
+                                d="M3 9.5a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3m5 0a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3m5 0a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3"
+                            />
+                        </svg>
+                    </div>
+                    <div class="row mt-4 position-relative">
+                        <div
+                            class="col-12 d-flex justify-content-between align-items-center"
+                        >
+                            <div
+                                class="d-flex justify-content-evenly gap-4 main-content-info-song"
+                            >
+                                <span class="number-title">#</span>
+                                <span class="number-title">Titolo</span>
+                            </div>
+                            <div>
+                                <span class="number-title"
+                                    ><i class="bi bi-clock"></i
+                                ></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="cointainer-album px-4">
+                    <div>
+                        <ol
+                            class="border-0 rounded-0 list-group list-group-numbered d-flex row-gap-2"
+                        >
+                            <li
+                                class="bg-transparent row border-0 list-group-item d-flex justify-content-end align-items-center text-white px-3 pe-2"
+                            >
+                                <div
+                                    class="col-4 justify-content-start ps-3 me-auto"
+                                >
+                                    <div class="fw-bold">Titolo canzone</div>
+                                    <div>Nome Artista</div>
+                                </div>
+                                <p
+                                    class="col-4 px-0 my-0 d-flex justify-content-end"
+                                ></p>
+                                <span
+                                    class="col-3 px-0 d-flex justify-content-end"
+                                    >1:28</span
+                                >
+                            </li>
+                        </ol>
+                    </div>
+                    <div class="mt-5">
+                        <p class="m-0 album-year">2004</p>
+                        <p class="m-0 album-year-copyright">
+                            Diritti Casa Discografica
+                        </p>
+                        <p class="m-0 album-year-copyright">
+                            Diritti Anno Casa Discografica
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </template>
+
+        <template id="artist"></template>
 
         <script src="./node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
         <script src="./js/script.js"></script>
