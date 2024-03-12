@@ -126,7 +126,7 @@
         </div>
     </div>
     <div class="col main-content grey-container p-0 ">
-        <header class="row g-0 p-3 sticky-top">
+        <header class="header row g-0 p-3 d-flex">
             <div class=" col">
                 <button class="history-arrow"><i class="bi bi-caret-left "></i></button>
                 <button class="history-arrow"><i class="bi bi-caret-right"></i></button>
@@ -150,15 +150,16 @@
             </div>
         </header>
         <div>
-            <div class="bg-success bg-gradient p-4">
-                <div class="row header-album d-flex align-items-center">
+            <div class="container-info-album">
+                <div class="row header-album d-flex align-items-end">
                     <div class="col-auto">
-                        <img src="https://picsum.photos/200" alt="">
+                        <img class="album-img" src="https://picsum.photos/200" alt="">
                     </div>
                     <div class="col">
-                        <p>Album</p>
-                        <h2>Nome Album</h2>
+                        <p class="m-0">Album</p>
+                        <h2 class="album-name">Nome Album</h2>
                         <div class="d-flex gap-2 align-items-center">
+                            <span class=""><img src="" alt=""></span>
                             <span>Nome Artista</span>
                             <span> • </span>
                             <span>Anno Album</span>
@@ -168,7 +169,7 @@
                     </div>
                 </div>
             </div>
-            <div class="mx-4 border-bottom pb-2 ">
+            <div class="mx-4 position-relative border-bottom pb-2 ">
                 <div class="d-flex align-items-center gap-3 py-3">
                     <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" fill="currentColor"
                         class="bi bi-play-circle" viewBox="0 0 16 16">
@@ -192,13 +193,14 @@
                             d="M3 9.5a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3m5 0a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3m5 0a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3" />
                     </svg>
                 </div>
-                <div class="row sticky-top">
+                <div class="row mt-4 position-relative">
                     <div class="col-12 d-flex justify-content-between align-items-center">
-                        <div class="d-flex justify-content-evenly gap-4">
-                            <span>#</span><span>Titolo</span>
+                        <div class="d-flex justify-content-evenly gap-4 main-content-info-song">
+                            <span class="number-title">#</span>
+                            <span class="number-title">Titolo</span>
                         </div>
                         <div>
-                            <span><i class=" bi bi-clock"></i></span>
+                            <span class="number-title"><i class=" bi bi-clock"></i></span>
                         </div>
                     </div>
                 </div>
@@ -209,40 +211,99 @@
                         <li
                             class="bg-transparent row border-0 list-group-item d-flex justify-content-end align-items-center text-white px-3 pe-2">
                             <div class="col-4 justify-content-start ps-3 me-auto">
-                                <div class="fw-bold">Subheading</div>
-                                <div>Content for list item</div>
+                                <div class="fw-bold">Titolo canzone</div>
+                                <div>Nome Artista</div>
                             </div>
-                            <p class="col-4 px-0 my-0 d-flex justify-content-end">reprodutcion</p>
+                            <p class="col-4 px-0 my-0 d-flex justify-content-end"></p>
                             <span class="col-3 px-0 d-flex justify-content-end">1:28</span>
                         </li>
                         <li
                             class="bg-transparent row border-0 list-group-item d-flex justify-content-end align-items-center text-white px-3 pe-2">
                             <div class="col-4 justify-content-start ps-3 me-auto">
-                                <div class="fw-bold">Subheading</div>
-                                <div>Content for list item</div>
+                                <div class="fw-bold">Titolo canzone</div>
+                                <div>Nome Artista</div>
                             </div>
-                            <p class="col-4 px-0 my-0 d-flex justify-content-end">riprod</p>
+                            <p class="col-4 px-0 my-0 d-flex justify-content-end"></p>
                             <span class="col-3 px-0 d-flex justify-content-end">1:28</span>
                         </li>
                         <li
                             class="bg-transparent row border-0 list-group-item d-flex justify-content-end align-items-center text-white px-3 pe-2">
                             <div class="col-4 justify-content-start ps-3 me-auto">
-                                <div class="fw-bold">Subheading</div>
-                                <div>Content for list item</div>
+                                <div class="fw-bold">Titolo canzone</div>
+                                <div>Nome Artista</div>
                             </div>
-                            <p class="col-4 px-0 my-0 d-flex justify-content-end">riprod</p>
+                            <p class="col-4 px-0 my-0 d-flex justify-content-end"></p>
                             <span class="col-3 px-0 d-flex justify-content-end">1:28</span>
                         </li>
                         <li
                             class="bg-transparent row border-0 list-group-item d-flex justify-content-end align-items-center text-white px-3 pe-2">
                             <div class="col-4 justify-content-start ps-3 me-auto">
-                                <div class="fw-bold">Subheading</div>
-                                <div>Content for list item</div>
+                                <div class="fw-bold">Titolo canzone</div>
+                                <div>Nome Artista</div>
                             </div>
-                            <p class="col-4 px-0 my-0 d-flex justify-content-end">riprod</p>
+                            <p class="col-4 px-0 my-0 d-flex justify-content-end"></p>
+                            <span class="col-3 px-0 d-flex justify-content-end">1:28</span>
+                        </li>
+                        <li
+                            class="bg-transparent row border-0 list-group-item d-flex justify-content-end align-items-center text-white px-3 pe-2">
+                            <div class="col-4 justify-content-start ps-3 me-auto">
+                                <div class="fw-bold">Titolo canzone</div>
+                                <div>Nome Artista</div>
+                            </div>
+                            <p class="col-4 px-0 my-0 d-flex justify-content-end"></p>
+                            <span class="col-3 px-0 d-flex justify-content-end">1:28</span>
+                        </li>
+                        <li
+                            class="bg-transparent row border-0 list-group-item d-flex justify-content-end align-items-center text-white px-3 pe-2">
+                            <div class="col-4 justify-content-start ps-3 me-auto">
+                                <div class="fw-bold">Titolo canzone</div>
+                                <div>Nome Artista</div>
+                            </div>
+                            <p class="col-4 px-0 my-0 d-flex justify-content-end"></p>
+                            <span class="col-3 px-0 d-flex justify-content-end">1:28</span>
+                        </li>
+                        <li
+                            class="bg-transparent row border-0 list-group-item d-flex justify-content-end align-items-center text-white px-3 pe-2">
+                            <div class="col-4 justify-content-start ps-3 me-auto">
+                                <div class="fw-bold">Titolo canzone</div>
+                                <div>Nome Artista</div>
+                            </div>
+                            <p class="col-4 px-0 my-0 d-flex justify-content-end"></p>
+                            <span class="col-3 px-0 d-flex justify-content-end">1:28</span>
+                        </li>
+                        <li
+                            class="bg-transparent row border-0 list-group-item d-flex justify-content-end align-items-center text-white px-3 pe-2">
+                            <div class="col-4 justify-content-start ps-3 me-auto">
+                                <div class="fw-bold">Titolo canzone</div>
+                                <div>Nome Artista</div>
+                            </div>
+                            <p class="col-4 px-0 my-0 d-flex justify-content-end"></p>
+                            <span class="col-3 px-0 d-flex justify-content-end">1:28</span>
+                        </li>
+                        <li
+                            class="bg-transparent row border-0 list-group-item d-flex justify-content-end align-items-center text-white px-3 pe-2">
+                            <div class="col-4 justify-content-start ps-3 me-auto">
+                                <div class="fw-bold">Titolo canzone</div>
+                                <div>Nome Artista</div>
+                            </div>
+                            <p class="col-4 px-0 my-0 d-flex justify-content-end"></p>
+                            <span class="col-3 px-0 d-flex justify-content-end">1:28</span>
+                        </li>
+                        <li
+                            class="bg-transparent row border-0 list-group-item d-flex justify-content-end align-items-center text-white px-3 pe-2">
+                            <div class="col-4 justify-content-start ps-3 me-auto">
+                                <div class="fw-bold">Titolo canzone</div>
+                                <div>Nome Artista</div>
+                            </div>
+                            <p class="col-4 px-0 my-0 d-flex justify-content-end"></p>
                             <span class="col-3 px-0 d-flex justify-content-end">1:28</span>
                         </li>
                     </ol>
+                </div>
+                <div class="mt-5">
+                    <p class="m-0 album-year">2004</p>
+                    <p class="m-0 album-year-copyright">Diritti Casa Discografica</p>
+                    <p class="m-0 album-year-copyright">Diritti Anno Casa Discografica</p>
                 </div>
             </div>
         </div>
