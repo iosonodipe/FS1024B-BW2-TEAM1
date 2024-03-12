@@ -11844,79 +11844,43 @@ textarea.form-control-lg {
     display: none !important;
   }
 }
-.number-title {
-  color: grey;
-}
-
-ol {
-  list-style: none;
-}
-
 .header {
   position: absolute;
   width: calc(100% - 312px);
   right: 30;
 }
 
-.main-content-info-song {
-  height: fit-content;
-  position: sticky;
-  top: 50px;
+.background-artist {
+  background-color: #0c67d3;
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 40vh;
 }
 
-.container-info-album {
-  background: rgb(40, 40, 40);
-  background: linear-gradient(0deg, rgb(40, 40, 40) 0%, rgb(94, 208, 92) 100%);
-  border-radius: 8px 8px 0px 0px;
-  padding: 6rem 1.5rem 1.5rem 1.5rem;
+.background-artist-text h1, .background-artist-text .h1 {
+  font-size: 6rem;
+  font-weight: 900;
+  margin-bottom: 2rem;
 }
-.container-info-album .album-img {
-  border-radius: 5px;
+
+.background-artist-text p i {
+  color: #0c67d3;
 }
-.container-info-album .album-name {
+
+.follow-dots {
+  font-size: 2rem;
+  margin-left: 2rem;
+}
+
+.play-green {
+  color: #1ed760;
   font-size: 3rem;
-  font-weight: 700;
+  margin-right: 2rem;
 }
 
-.dinamic-content {
-  overflow-y: auto;
-  margin-top: 100px;
-}
-
-.goodnight-element {
-  background-color: rgba(82, 82, 84, 0.5);
-  border-radius: 6px;
-}
-.goodnight-element:hover {
-  background-color: rgba(108, 108, 110, 0.5);
-}
-
-.card {
-  border: none;
-  color: white;
-  background-color: #282828;
-}
-.card .card-title {
-  font-weight: bold;
-}
-.card .card-text {
-  font-size: 0.9rem;
-  color: gray;
-}
-
-.card-square {
-  padding: 15px;
-  text-align: center;
-}
-.card-square img {
-  border-radius: 10px;
-  max-width: 250px;
-}
-
-.card-circle {
-  padding: 15px;
-}
-.card-circle img {
+.liked-songs-image {
+  width: 5rem;
+  height: 5rem;
   border-radius: 50%;
 }
 
