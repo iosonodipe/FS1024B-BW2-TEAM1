@@ -11844,6 +11844,40 @@ textarea.form-control-lg {
     display: none !important;
   }
 }
+.number-title {
+  color: grey;
+}
+
+ol {
+  list-style: none;
+}
+
+.header {
+  position: absolute;
+  width: calc(100% - 312px);
+  right: 30;
+}
+
+.main-content-info-song {
+  height: fit-content;
+  position: sticky;
+  top: 50px;
+}
+
+.container-info-album {
+  background: rgb(40, 40, 40);
+  background: linear-gradient(0deg, rgb(40, 40, 40) 0%, rgb(94, 208, 92) 100%);
+  border-radius: 8px 8px 0px 0px;
+  padding: 6rem 1.5rem 1.5rem 1.5rem;
+}
+.container-info-album .album-img {
+  border-radius: 5px;
+}
+.container-info-album .album-name {
+  font-size: 3rem;
+  font-weight: 700;
+}
+
 body {
   font-family: "Circular", sans-serif;
   background-color: black;
@@ -11929,7 +11963,7 @@ body {
 }
 
 ::-webkit-scrollbar-track {
-  background: #121212;
+  background: transparent;
 }
 
 ::-webkit-scrollbar-thumb {
@@ -11942,9 +11976,10 @@ body {
   overflow-y: auto;
 }
 .main-content header {
-  border-radius: 8px 8px 0px 0px;
-  background-color: rgba(102, 102, 106, 0);
-  z-index: 10;
+  border-radius: 8px 0px 0px 0px;
+  transition: all 0.4s ease;
+  background-color: rgba(40, 40, 40, 0);
+  z-index: 1;
 }
 .main-content header .history-arrow {
   color: white;
