@@ -98,6 +98,7 @@ body {
     header{
     border-radius: 8px 8px 0px 0px;
     background-color: rgba($color: #66666A, $alpha: 0.0);
+    z-index: 10;
     .history-arrow{
         
         color: white;
