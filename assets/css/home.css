@@ -1,0 +1,13 @@
+.dinamic-content {
+  overflow-y: auto;
+}
+
+.goodnight-element {
+  background-color: rgba(82, 82, 84, 0.5);
+  border-radius: 6px;
+}
+.goodnight-element:hover {
+  background-color: rgba(108, 108, 110, 0.5);
+}
+
+/*# sourceMappingURL=home.css.map */

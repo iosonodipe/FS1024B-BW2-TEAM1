@@ -1,0 +1,11 @@
+.dinamic-content{
+    overflow-y: auto;
+}
+
+.goodnight-element{
+    background-color: rgba($color: #525254, $alpha: 0.5);
+    border-radius: 6px;
+    &:hover{
+        background-color: rgba($color: #6c6c6e, $alpha: 0.5);
+    }
+}
