@@ -1,362 +1,477 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="./node_modules/bootstrap/dist/css/bootstrap.min.css">
-    <link rel="stylesheet" href="./node_modules/bootstrap-icons/font/bootstrap-icons.min.css">
-    <link rel="stylesheet" href="./assets/css/style.css">
-</head>
-<div class="row m-0 p-2 gap-2">
-    <div class="col-auto left-menu">
-        <div class="row flex-column resize">
-            <div class="col grey-container main-menu">
-                <div class="bold">
-                    <a class="flex-bold" href=""><i class="bi bi-house-door h4 me-3"></i><span>Home</span></a>
-                </div>
-                <div class=" bold mt-3">
-                    <a class="flex-bold" href=""><i class="bi bi-search h4 me-3"></i><span>Cerca</span></a>
-                </div>
-            </div>
-            <div class="col grey-container mt-2">
-                <div class="row align-items-center library">
-                    <div class="col">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+        <link
+            rel="stylesheet"
+            href="./node_modules/bootstrap/dist/css/bootstrap.min.css"
+        />
+        <link
+            rel="stylesheet"
+            href="./node_modules/bootstrap-icons/font/bootstrap-icons.min.css"
+        />
+        <link rel="stylesheet" href="./assets/css/style.css" />
+    </head>
+    <body>
+        <div class="row m-0 p-2 gap-2">
+            <div class="col-auto left-menu">
+                <div class="row flex-column resize">
+                    <div class="col grey-container main-menu">
                         <div class="bold">
-                            <a href=""><i class="bi bi-collection-fill h3 me-3"></i><span>La tua libreria</span></a>
+                            <a class="flex-bold" href=""
+                                ><i class="bi bi-house-door h4 me-3"></i
+                                ><span>Home</span></a
+                            >
+                        </div>
+                        <div class="bold mt-3">
+                            <a class="flex-bold" href=""
+                                ><i class="bi bi-search h4 me-3"></i
+                                ><span>Cerca</span></a
+                            >
                         </div>
                     </div>
-                    <div class="col-2">
-                        <div class="bold">
-                            <i class="bi bi-plus-lg h5 me-2 plus"></i>
-                        </div>
-                    </div>
-                </div>
-                <div class="pill-container mt-3">
-                    <button class="pill me-1">Playlist</button>
-                    <button class="pill me-1">Artisti</button>
-                    <button class="pill me-1">Album</button>
-                </div>
-                <!-- playlist sotto la tua libreria -->
-                <div class="playlist mt-3 playlist-library">
-                    <div class="element mb-3 d-flex gap-2 align-items-center">
-                        <img class="playlist-image" src="./assets/imgs/main/image-1.jpg" alt="">
-                        <div class="element-text">
-                            <span>Liked Songs</span>
-                            <div class="info">
-                                <span>Playlist • User</span>
+                    <div class="col grey-container mt-2">
+                        <div class="row align-items-center library">
+                            <div class="col">
+                                <div class="bold">
+                                    <a href=""
+                                        ><i
+                                            class="bi bi-collection-fill h3 me-3"
+                                        ></i
+                                        ><span>La tua libreria</span></a
+                                    >
+                                </div>
+                            </div>
+                            <div class="col-2">
+                                <div class="bold">
+                                    <i class="bi bi-plus-lg h5 me-2 plus"></i>
+                                </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="element mb-3 d-flex gap-2 align-items-center">
-                        <img class="playlist-image" src="./assets/imgs/main/image-10.jpg" alt="">
-                        <div class="element-text">
-                            <span>Liked Songs</span>
-                            <div class="info">
-                                <span>Playlist • User</span>
-                            </div>
+                        <div class="pill-container mt-3">
+                            <button class="pill me-1">Playlist</button>
+                            <button class="pill me-1">Artisti</button>
+                            <button class="pill me-1">Album</button>
                         </div>
-                    </div>
-                    <div class="element mb-3 d-flex gap-2 align-items-center">
-                        <img class="playlist-image" src="./assets/imgs/main/image-10.jpg" alt="">
-                        <div class="element-text">
-                            <span>Liked Songs</span>
-                            <div class="info">
-                                <span>Playlist • User</span>
+                        <!-- playlist sotto la tua libreria -->
+                        <div class="playlist mt-3 playlist-library">
+                            <div
+                                class="element mb-3 d-flex gap-2 align-items-center"
+                            >
+                                <img
+                                    class="playlist-image"
+                                    src="./assets/imgs/main/image-1.jpg"
+                                    alt=""
+                                />
+                                <div class="element-text">
+                                    <span>Liked Songs</span>
+                                    <div class="info">
+                                        <span>Playlist • User</span>
+                                    </div>
+                                </div>
                             </div>
-                        </div>
-                    </div>
-                    <div class="element mb-3 d-flex gap-2 align-items-center">
-                        <img class="playlist-image" src="./assets/imgs/main/image-10.jpg" alt="">
-                        <div class="element-text">
-                            <span>Liked Songs</span>
-                            <div class="info">
-                                <span>Playlist • User</span>
+                            <div
+                                class="element mb-3 d-flex gap-2 align-items-center"
+                            >
+                                <img
+                                    class="playlist-image"
+                                    src="./assets/imgs/main/image-10.jpg"
+                                    alt=""
+                                />
+                                <div class="element-text">
+                                    <span>Liked Songs</span>
+                                    <div class="info">
+                                        <span>Playlist • User</span>
+                                    </div>
+                                </div>
                             </div>
-                        </div>
-                    </div>
-                    <div class="element mb-3 d-flex gap-2 align-items-center">
-                        <img class="playlist-image" src="./assets/imgs/main/image-10.jpg" alt="">
-                        <div class="element-text">
-                            <span>Liked Songs</span>
-                            <div class="info">
-                                <span>Playlist • User</span>
+                            <div
+                                class="element mb-3 d-flex gap-2 align-items-center"
+                            >
+                                <img
+                                    class="playlist-image"
+                                    src="./assets/imgs/main/image-10.jpg"
+                                    alt=""
+                                />
+                                <div class="element-text">
+                                    <span>Liked Songs</span>
+                                    <div class="info">
+                                        <span>Playlist • User</span>
+                                    </div>
+                                </div>
                             </div>
-                        </div>
-                    </div>
-                    <div class="element mb-3 d-flex gap-2 align-items-center">
-                        <img class="playlist-image" src="./assets/imgs/main/image-10.jpg" alt="">
-                        <div class="element-text">
-                            <span>Liked Songs</span>
-                            <div class="info">
-                                <span>Playlist • User</span>
+                            <div
+                                class="element mb-3 d-flex gap-2 align-items-center"
+                            >
+                                <img
+                                    class="playlist-image"
+                                    src="./assets/imgs/main/image-10.jpg"
+                                    alt=""
+                                />
+                                <div class="element-text">
+                                    <span>Liked Songs</span>
+                                    <div class="info">
+                                        <span>Playlist • User</span>
+                                    </div>
+                                </div>
                             </div>
-                        </div>
-                    </div>
-                    <div class="element mb-3 d-flex gap-2 align-items-center">
-                        <img class="playlist-image" src="./assets/imgs/main/image-10.jpg" alt="">
-                        <div class="element-text">
-                            <span>Liked Songs</span>
-                            <div class="info">
-                                <span>Playlist • User</span>
+                            <div
+                                class="element mb-3 d-flex gap-2 align-items-center"
+                            >
+                                <img
+                                    class="playlist-image"
+                                    src="./assets/imgs/main/image-10.jpg"
+                                    alt=""
+                                />
+                                <div class="element-text">
+                                    <span>Liked Songs</span>
+                                    <div class="info">
+                                        <span>Playlist • User</span>
+                                    </div>
+                                </div>
                             </div>
-                        </div>
-                    </div>
-                    <div class="element mb-3 d-flex gap-2 align-items-center">
-                        <img class="playlist-image" src="./assets/imgs/main/image-10.jpg" alt="">
-                        <div class="element-text">
-                            <span>Liked Songs</span>
-                            <div class="info">
-                                <span>Playlist • User</span>
+                            <div
+                                class="element mb-3 d-flex gap-2 align-items-center"
+                            >
+                                <img
+                                    class="playlist-image"
+                                    src="./assets/imgs/main/image-10.jpg"
+                                    alt=""
+                                />
+                                <div class="element-text">
+                                    <span>Liked Songs</span>
+                                    <div class="info">
+                                        <span>Playlist • User</span>
+                                    </div>
+                                </div>
                             </div>
-                        </div>
-                    </div>
-                    <div class="element mb-3 d-flex gap-2 align-items-center">
-                        <img class="playlist-image" src="./assets/imgs/main/image-10.jpg" alt="">
-                        <div class="element-text">
-                            <span>Liked Songs</span>
-                            <div class="info">
-                                <span>Playlist • User</span>
+                            <div
+                                class="element mb-3 d-flex gap-2 align-items-center"
+                            >
+                                <img
+                                    class="playlist-image"
+                                    src="./assets/imgs/main/image-10.jpg"
+                                    alt=""
+                                />
+                                <div class="element-text">
+                                    <span>Liked Songs</span>
+                                    <div class="info">
+                                        <span>Playlist • User</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div
+                                class="element mb-3 d-flex gap-2 align-items-center"
+                            >
+                                <img
+                                    class="playlist-image"
+                                    src="./assets/imgs/main/image-10.jpg"
+                                    alt=""
+                                />
+                                <div class="element-text">
+                                    <span>Liked Songs</span>
+                                    <div class="info">
+                                        <span>Playlist • User</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div
+                                class="element mb-3 d-flex gap-2 align-items-center"
+                            >
+                                <img
+                                    class="playlist-image"
+                                    src="./assets/imgs/main/image-10.jpg"
+                                    alt=""
+                                />
+                                <div class="element-text">
+                                    <span>Liked Songs</span>
+                                    <div class="info">
+                                        <span>Playlist • User</span>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
-    </div>
-    <div class="col main-content grey-container p-0 ">
-        <header class="row g-0 p-3 sticky-top">
-            <div class=" col">
-                <button class="history-arrow"><i class="bi bi-caret-left "></i></button>
-                <button class="history-arrow"><i class="bi bi-caret-right"></i></button>
-            </div>
-            <div class="col text-end d-flex justify-content-end gap-2">
-                <button class="history-arrow"><i class="bi bi-bell"></i></button>
-                <div class="dropdown text-end d-inline" bis_skin_checked="1">
-                    <a href="#" class="d-block link-body-emphasis text-decoration-none dropdown-toggle"
-                        data-bs-toggle="dropdown" aria-expanded="false">
-                        <img src="https://github.com/mdo.png" alt="mdo" width="32" height="32" class="rounded-circle">
-                    </a>
-                    <ul class="dropdown-menu text-small ">
-                        <li><a class="dropdown-item" href="#">Settings</a></li>
-                        <li><a class="dropdown-item" href="#">Profile</a></li>
-                        <li>
-                            <hr class="dropdown-divider">
-                        </li>
-                        <li><a class="dropdown-item" href="#">Sign out</a></li>
-                    </ul>
-                </div>
-            </div>
-        </header>
-        <div>
-            <div class="bg-success bg-gradient p-4">
-                <div class="row header-album d-flex align-items-center">
-                    <div class="col-auto">
-                        <img src="https://picsum.photos/200" alt="">
-                    </div>
+            <div class="col main-content grey-container p-0">
+                <header class="header row g-0 p-3 d-flex">
                     <div class="col">
-                        <p>Album</p>
-                        <h2>Nome Album</h2>
-                        <div class="d-flex gap-2 align-items-center">
-                            <span>Nome Artista</span>
-                            <span> • </span>
-                            <span>Anno Album</span>
-                            <span> • </span>
-                            <span>N brani, Totale Ascolto</span>
+                        <button class="history-arrow">
+                            <i class="bi bi-caret-left"></i>
+                        </button>
+                        <button class="history-arrow">
+                            <i class="bi bi-caret-right"></i>
+                        </button>
+                    </div>
+                    <div class="col text-end d-flex justify-content-end gap-2">
+                        <button class="history-arrow">
+                            <i class="bi bi-bell"></i>
+                        </button>
+                        <div
+                            class="dropdown text-end d-inline"
+                            bis_skin_checked="1"
+                        >
+                            <a
+                                href="#"
+                                class="d-block link-body-emphasis text-decoration-none dropdown-toggle"
+                                data-bs-toggle="dropdown"
+                                aria-expanded="false"
+                            >
+                                <img
+                                    src="https://github.com/mdo.png"
+                                    alt="mdo"
+                                    width="32"
+                                    height="32"
+                                    class="rounded-circle"
+                                />
+                            </a>
+                            <ul class="dropdown-menu text-small">
+                                <li>
+                                    <a class="dropdown-item" href="#"
+                                        >Settings</a
+                                    >
+                                </li>
+                                <li>
+                                    <a class="dropdown-item" href="#"
+                                        >Profile</a
+                                    >
+                                </li>
+                                <li>
+                                    <hr class="dropdown-divider" />
+                                </li>
+                                <li>
+                                    <a class="dropdown-item" href="#"
+                                        >Sign out</a
+                                    >
+                                </li>
+                            </ul>
                         </div>
                     </div>
-                </div>
+                </header>
+                
             </div>
-            <div class="mx-4 border-bottom pb-2 ">
-                <div class="d-flex align-items-center gap-3 py-3">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" fill="currentColor"
-                        class="bi bi-play-circle" viewBox="0 0 16 16">
-                        <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14m0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16" />
+        </div>
+
+        <div class="container-fluid soundbarContainer">
+            <div class="row">
+                <div class="col-3 info">
+                    <img id="copertina" src="../assets/imgs/main/image-1.jpg" />
+                    <div class="titleArtist">
+                        <span class="song">Sole in zona</span>
+                        <span class="artist">Silent Bob, Sick Budd</span>
+                    </div>
+                    <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="16"
+                        height="16"
+                        fill="currentColor"
+                        class="bi bi-heart heart"
+                        viewBox="0 0 16 16"
+                    >
                         <path
-                            d="M6.271 5.055a.5.5 0 0 1 .52.038l3.5 2.5a.5.5 0 0 1 0 .814l-3.5 2.5A.5.5 0 0 1 6 10.5v-5a.5.5 0 0 1 .271-.445" />
-                    </svg>
-                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor"
-                        class="bi bi-heart-fill" viewBox="0 0 16 16">
-                        <path fill-rule="evenodd"
-                            d="M8 1.314C12.438-3.248 23.534 4.735 8 15-7.534 4.736 3.562-3.248 8 1.314" />
-                    </svg>
-                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor"
-                        class="bi bi-arrow-down-circle" viewBox="0 0 16 16">
-                        <path fill-rule="evenodd"
-                            d="M1 8a7 7 0 1 0 14 0A7 7 0 0 0 1 8m15 0A8 8 0 1 1 0 8a8 8 0 0 1 16 0M8.5 4.5a.5.5 0 0 0-1 0v5.793L5.354 8.146a.5.5 0 1 0-.708.708l3 3a.5.5 0 0 0 .708 0l3-3a.5.5 0 0 0-.708-.708L8.5 10.293z" />
-                    </svg>
-                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor"
-                        class="bi bi-three-dots" viewBox="0 0 16 16">
-                        <path
-                            d="M3 9.5a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3m5 0a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3m5 0a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3" />
+                            d="m8 2.748-.717-.737C5.6.281 2.514.878 1.4 3.053c-.523 1.023-.641 2.5.314 4.385.92 1.815 2.834 3.989 6.286 6.357 3.452-2.368 5.365-4.542 6.286-6.357.955-1.886.838-3.362.314-4.385C13.486.878 10.4.28 8.717 2.01zM8 15C-7.333 4.868 3.279-3.04 7.824 1.143q.09.083.176.171a3 3 0 0 1 .176-.17C12.72-3.042 23.333 4.867 8 15"
+                        />
                     </svg>
                 </div>
-                <div class="row sticky-top">
-                    <div class="col-12 d-flex justify-content-between align-items-center">
-                        <div class="d-flex justify-content-evenly gap-4">
-                            <span>#</span><span>Titolo</span>
+                <div class="col-6 prodContainer">
+                    <audio id="player" src=""></audio>
+                    <div class="producer">
+                        <div class="col">
+                            <button class="buttonProd">
+                                <svg
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    width="20"
+                                    height="20"
+                                    fill="currentColor"
+                                    class="bi bi-shuffle text-white"
+                                    viewBox="0 0 16 16"
+                                >
+                                    <path
+                                        fill-rule="evenodd"
+                                        d="M0 3.5A.5.5 0 0 1 .5 3H1c2.202 0 3.827 1.24 4.874 2.418.49.552.865 1.102 1.126 1.532.26-.43.636-.98 1.126-1.532C9.173 4.24 10.798 3 13 3v1c-1.798 0-3.173 1.01-4.126 2.082A9.6 9.6 0 0 0 7.556 8a9.6 9.6 0 0 0 1.317 1.918C9.828 10.99 11.204 12 13 12v1c-2.202 0-3.827-1.24-4.874-2.418A10.6 10.6 0 0 1 7 9.05c-.26.43-.636.98-1.126 1.532C4.827 11.76 3.202 13 1 13H.5a.5.5 0 0 1 0-1H1c1.798 0 3.173-1.01 4.126-2.082A9.6 9.6 0 0 0 6.444 8a9.6 9.6 0 0 0-1.317-1.918C4.172 5.01 2.796 4 1 4H.5a.5.5 0 0 1-.5-.5"
+                                    />
+                                    <path
+                                        d="M13 5.466V1.534a.25.25 0 0 1 .41-.192l2.36 1.966c.12.1.12.284 0 .384l-2.36 1.966a.25.25 0 0 1-.41-.192m0 9v-3.932a.25.25 0 0 1 .41-.192l2.36 1.966c.12.1.12.284 0 .384l-2.36 1.966a.25.25 0 0 1-.41-.192"
+                                    />
+                                </svg>
+                            </button>
+                            <button class="buttonProd">
+                                <svg
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    width="25"
+                                    height="25"
+                                    fill="currentColor"
+                                    class="bi bi-skip-start-fill text-white"
+                                    viewBox="0 0 16 16"
+                                >
+                                    <path
+                                        d="M4 4a.5.5 0 0 1 1 0v3.248l6.267-3.636c.54-.313 1.232.066 1.232.696v7.384c0 .63-.692 1.01-1.232.697L5 8.753V12a.5.5 0 0 1-1 0z"
+                                    />
+                                </svg>
+                            </button>
+                            <button class="buttonProd">
+                                <svg
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    width="35"
+                                    height="35"
+                                    fill="currentColor"
+                                    class="bi bi-pause-circle-fill text-white"
+                                    viewBox="0 0 16 16"
+                                >
+                                    <path
+                                        d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0M6.25 5C5.56 5 5 5.56 5 6.25v3.5a1.25 1.25 0 1 0 2.5 0v-3.5C7.5 5.56 6.94 5 6.25 5m3.5 0c-.69 0-1.25.56-1.25 1.25v3.5a1.25 1.25 0 1 0 2.5 0v-3.5C11 5.56 10.44 5 9.75 5"
+                                    />
+                                </svg>
+                            </button>
+                            <button class="buttonProd">
+                                <svg
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    width="25"
+                                    height="25"
+                                    fill="currentColor"
+                                    class="bi bi-skip-end-fill text-white"
+                                    viewBox="0 0 16 16"
+                                >
+                                    <path
+                                        d="M12.5 4a.5.5 0 0 0-1 0v3.248L5.233 3.612C4.693 3.3 4 3.678 4 4.308v7.384c0 .63.692 1.01 1.233.697L11.5 8.753V12a.5.5 0 0 0 1 0z"
+                                    />
+                                </svg>
+                            </button>
+                            <button class="buttonProd">
+                                <svg
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    width="20"
+                                    height="20"
+                                    fill="currentColor"
+                                    class="bi bi-repeat text-white"
+                                    viewBox="0 0 16 16"
+                                >
+                                    <path
+                                        d="M11 5.466V4H5a4 4 0 0 0-3.584 5.777.5.5 0 1 1-.896.446A5 5 0 0 1 5 3h6V1.534a.25.25 0 0 1 .41-.192l2.36 1.966c.12.1.12.284 0 .384l-2.36 1.966a.25.25 0 0 1-.41-.192m3.81.086a.5.5 0 0 1 .67.225A5 5 0 0 1 11 13H5v1.466a.25.25 0 0 1-.41.192l-2.36-1.966a.25.25 0 0 1 0-.384l2.36-1.966a.25.25 0 0 1 .41.192V12h6a4 4 0 0 0 3.585-5.777.5.5 0 0 1 .225-.67Z"
+                                    />
+                                </svg>
+                            </button>
                         </div>
-                        <div>
-                            <span><i class=" bi bi-clock"></i></span>
+                        <div class="col barContainer">
+                            <span class="minutes">00:00</span>
+                            <div
+                                class="progress barSettings"
+                                role="progressbar"
+                                aria-label="Basic example"
+                                aria-valuenow="25"
+                                aria-valuemin="0"
+                                aria-valuemax="100"
+                            >
+                                <div class="progress-bar"></div>
+                            </div>
+                            <span class="minutes">2:43</span>
                         </div>
                     </div>
                 </div>
-            </div>
-            <div class="cointainer-album px-4">
-                <div>
-                    <ol class="border-0 rounded-0 list-group list-group-numbered d-flex row-gap-2">
-                        <li
-                            class="bg-transparent row border-0 list-group-item d-flex justify-content-end align-items-center text-white px-3 pe-2">
-                            <div class="col-4 justify-content-start ps-3 me-auto">
-                                <div class="fw-bold">Subheading</div>
-                                <div>Content for list item</div>
-                            </div>
-                            <p class="col-4 px-0 my-0 d-flex justify-content-end">reprodutcion</p>
-                            <span class="col-3 px-0 d-flex justify-content-end">1:28</span>
-                        </li>
-                        <li
-                            class="bg-transparent row border-0 list-group-item d-flex justify-content-end align-items-center text-white px-3 pe-2">
-                            <div class="col-4 justify-content-start ps-3 me-auto">
-                                <div class="fw-bold">Subheading</div>
-                                <div>Content for list item</div>
-                            </div>
-                            <p class="col-4 px-0 my-0 d-flex justify-content-end">riprod</p>
-                            <span class="col-3 px-0 d-flex justify-content-end">1:28</span>
-                        </li>
-                        <li
-                            class="bg-transparent row border-0 list-group-item d-flex justify-content-end align-items-center text-white px-3 pe-2">
-                            <div class="col-4 justify-content-start ps-3 me-auto">
-                                <div class="fw-bold">Subheading</div>
-                                <div>Content for list item</div>
-                            </div>
-                            <p class="col-4 px-0 my-0 d-flex justify-content-end">riprod</p>
-                            <span class="col-3 px-0 d-flex justify-content-end">1:28</span>
-                        </li>
-                        <li
-                            class="bg-transparent row border-0 list-group-item d-flex justify-content-end align-items-center text-white px-3 pe-2">
-                            <div class="col-4 justify-content-start ps-3 me-auto">
-                                <div class="fw-bold">Subheading</div>
-                                <div>Content for list item</div>
-                            </div>
-                            <p class="col-4 px-0 my-0 d-flex justify-content-end">riprod</p>
-                            <span class="col-3 px-0 d-flex justify-content-end">1:28</span>
-                        </li>
-                    </ol>
+                <div class="col-3 asideContainer">
+                    <button class="buttonProd">
+                        <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            width="17"
+                            height="17"
+                            fill="currentColor"
+                            class="bi bi-file-play"
+                            viewBox="0 0 16 16"
+                        >
+                            <path
+                                d="M6 10.117V5.883a.5.5 0 0 1 .757-.429l3.528 2.117a.5.5 0 0 1 0 .858l-3.528 2.117a.5.5 0 0 1-.757-.43z"
+                            />
+                            <path
+                                d="M4 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2zm0 1h8a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1"
+                            />
+                        </svg>
+                    </button>
+                    <button class="buttonProd">
+                        <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            width="17"
+                            height="17"
+                            fill="currentColor"
+                            class="bi bi-mic"
+                            viewBox="0 0 16 16"
+                        >
+                            <path
+                                d="M3.5 6.5A.5.5 0 0 1 4 7v1a4 4 0 0 0 8 0V7a.5.5 0 0 1 1 0v1a5 5 0 0 1-4.5 4.975V15h3a.5.5 0 0 1 0 1h-7a.5.5 0 0 1 0-1h3v-2.025A5 5 0 0 1 3 8V7a.5.5 0 0 1 .5-.5"
+                            />
+                            <path
+                                d="M10 8a2 2 0 1 1-4 0V3a2 2 0 1 1 4 0zM8 0a3 3 0 0 0-3 3v5a3 3 0 0 0 6 0V3a3 3 0 0 0-3-3"
+                            />
+                        </svg>
+                    </button>
+                    <button class="buttonProd">
+                        <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            width="17"
+                            height="17"
+                            fill="currentColor"
+                            class="bi bi-view-list"
+                            viewBox="0 0 16 16"
+                        >
+                            <path
+                                d="M3 4.5h10a2 2 0 0 1 2 2v3a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2v-3a2 2 0 0 1 2-2m0 1a1 1 0 0 0-1 1v3a1 1 0 0 0 1 1h10a1 1 0 0 0 1-1v-3a1 1 0 0 0-1-1zM1 2a.5.5 0 0 1 .5-.5h13a.5.5 0 0 1 0 1h-13A.5.5 0 0 1 1 2m0 12a.5.5 0 0 1 .5-.5h13a.5.5 0 0 1 0 1h-13A.5.5 0 0 1 1 14"
+                            />
+                        </svg>
+                    </button>
+                    <button class="buttonProd">
+                        <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            width="17"
+                            height="17"
+                            fill="currentColor"
+                            class="bi bi-speaker"
+                            viewBox="0 0 16 16"
+                        >
+                            <path
+                                d="M12 1a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1zM4 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2z"
+                            />
+                            <path
+                                d="M8 4.75a.75.75 0 1 1 0-1.5.75.75 0 0 1 0 1.5M8 6a2 2 0 1 0 0-4 2 2 0 0 0 0 4m0 3a1.5 1.5 0 1 0 0 3 1.5 1.5 0 0 0 0-3m-3.5 1.5a3.5 3.5 0 1 1 7 0 3.5 3.5 0 0 1-7 0"
+                            />
+                        </svg>
+                    </button>
+                    <button class="buttonProd">
+                        <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            width="25"
+                            height="25"
+                            fill="currentColor"
+                            class="bi bi-volume-down"
+                            viewBox="0 0 16 16"
+                        >
+                            <path
+                                d="M9 4a.5.5 0 0 0-.812-.39L5.825 5.5H3.5A.5.5 0 0 0 3 6v4a.5.5 0 0 0 .5.5h2.325l2.363 1.89A.5.5 0 0 0 9 12zM6.312 6.39 8 5.04v5.92L6.312 9.61A.5.5 0 0 0 6 9.5H4v-3h2a.5.5 0 0 0 .312-.11M12.025 8a4.5 4.5 0 0 1-1.318 3.182L10 10.475A3.5 3.5 0 0 0 11.025 8 3.5 3.5 0 0 0 10 5.525l.707-.707A4.5 4.5 0 0 1 12.025 8"
+                            />
+                        </svg>
+                    </button>
+                    <input type="range" name="" id="volumeRange" />
+                    <button class="buttonProd">
+                        <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            width="15"
+                            height="15"
+                            fill="currentColor"
+                            class="bi bi-arrows-angle-expand"
+                            viewBox="0 0 16 16"
+                        >
+                            <path
+                                fill-rule="evenodd"
+                                d="M5.828 10.172a.5.5 0 0 0-.707 0l-4.096 4.096V11.5a.5.5 0 0 0-1 0v3.975a.5.5 0 0 0 .5.5H4.5a.5.5 0 0 0 0-1H1.732l4.096-4.096a.5.5 0 0 0 0-.707m4.344-4.344a.5.5 0 0 0 .707 0l4.096-4.096V4.5a.5.5 0 1 0 1 0V.525a.5.5 0 0 0-.5-.5H11.5a.5.5 0 0 0 0 1h2.768l-4.096 4.096a.5.5 0 0 0 0 .707"
+                            />
+                        </svg>
+                    </button>
                 </div>
             </div>
         </div>
-    </div>
-</div>
-</div>
 
-
-
-<div class="container-fluid soundbarContainer ">
-    <div class="row">
-        <div class="col-3 info">
-            <img id="copertina" src="../assets/imgs/main/image-1.jpg">
-            <div class="titleArtist">
-                <span class="song">Sole in zona</span>
-                <span class="artist">Silent Bob, Sick Budd</span>
-            </div>
-            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-heart heart"
-                viewBox="0 0 16 16">
-                <path
-                    d="m8 2.748-.717-.737C5.6.281 2.514.878 1.4 3.053c-.523 1.023-.641 2.5.314 4.385.92 1.815 2.834 3.989 6.286 6.357 3.452-2.368 5.365-4.542 6.286-6.357.955-1.886.838-3.362.314-4.385C13.486.878 10.4.28 8.717 2.01zM8 15C-7.333 4.868 3.279-3.04 7.824 1.143q.09.083.176.171a3 3 0 0 1 .176-.17C12.72-3.042 23.333 4.867 8 15" />
-            </svg>
-        </div>
-        <div class="col-6 prodContainer">
-            <audio id="player" src=""></audio>
-            <div class="producer">
-                <div class="col">
-                    <button class="buttonProd"> <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"
-                            fill="currentColor" class="bi bi-shuffle text-white" viewBox="0 0 16 16">
-                            <path fill-rule="evenodd"
-                                d="M0 3.5A.5.5 0 0 1 .5 3H1c2.202 0 3.827 1.24 4.874 2.418.49.552.865 1.102 1.126 1.532.26-.43.636-.98 1.126-1.532C9.173 4.24 10.798 3 13 3v1c-1.798 0-3.173 1.01-4.126 2.082A9.6 9.6 0 0 0 7.556 8a9.6 9.6 0 0 0 1.317 1.918C9.828 10.99 11.204 12 13 12v1c-2.202 0-3.827-1.24-4.874-2.418A10.6 10.6 0 0 1 7 9.05c-.26.43-.636.98-1.126 1.532C4.827 11.76 3.202 13 1 13H.5a.5.5 0 0 1 0-1H1c1.798 0 3.173-1.01 4.126-2.082A9.6 9.6 0 0 0 6.444 8a9.6 9.6 0 0 0-1.317-1.918C4.172 5.01 2.796 4 1 4H.5a.5.5 0 0 1-.5-.5" />
-                            <path
-                                d="M13 5.466V1.534a.25.25 0 0 1 .41-.192l2.36 1.966c.12.1.12.284 0 .384l-2.36 1.966a.25.25 0 0 1-.41-.192m0 9v-3.932a.25.25 0 0 1 .41-.192l2.36 1.966c.12.1.12.284 0 .384l-2.36 1.966a.25.25 0 0 1-.41-.192" />
-                        </svg> </button>
-                    <button class="buttonProd"><svg xmlns="http://www.w3.org/2000/svg" width="25" height="25"
-                            fill="currentColor" class="bi bi-skip-start-fill text-white" viewBox="0 0 16 16">
-                            <path
-                                d="M4 4a.5.5 0 0 1 1 0v3.248l6.267-3.636c.54-.313 1.232.066 1.232.696v7.384c0 .63-.692 1.01-1.232.697L5 8.753V12a.5.5 0 0 1-1 0z" />
-                        </svg></button>
-                    <button class="buttonProd"><svg xmlns="http://www.w3.org/2000/svg" width="35" height="35"
-                            fill="currentColor" class="bi bi-pause-circle-fill text-white" viewBox="0 0 16 16">
-                            <path
-                                d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0M6.25 5C5.56 5 5 5.56 5 6.25v3.5a1.25 1.25 0 1 0 2.5 0v-3.5C7.5 5.56 6.94 5 6.25 5m3.5 0c-.69 0-1.25.56-1.25 1.25v3.5a1.25 1.25 0 1 0 2.5 0v-3.5C11 5.56 10.44 5 9.75 5" />
-                        </svg></button>
-                    <button class="buttonProd"><svg xmlns="http://www.w3.org/2000/svg" width="25" height="25"
-                            fill="currentColor" class="bi bi-skip-end-fill text-white" viewBox="0 0 16 16">
-                            <path
-                                d="M12.5 4a.5.5 0 0 0-1 0v3.248L5.233 3.612C4.693 3.3 4 3.678 4 4.308v7.384c0 .63.692 1.01 1.233.697L11.5 8.753V12a.5.5 0 0 0 1 0z" />
-                        </svg></button>
-                    <button class="buttonProd"> <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"
-                            fill="currentColor" class="bi bi-repeat text-white" viewBox="0 0 16 16">
-                            <path
-                                d="M11 5.466V4H5a4 4 0 0 0-3.584 5.777.5.5 0 1 1-.896.446A5 5 0 0 1 5 3h6V1.534a.25.25 0 0 1 .41-.192l2.36 1.966c.12.1.12.284 0 .384l-2.36 1.966a.25.25 0 0 1-.41-.192m3.81.086a.5.5 0 0 1 .67.225A5 5 0 0 1 11 13H5v1.466a.25.25 0 0 1-.41.192l-2.36-1.966a.25.25 0 0 1 0-.384l2.36-1.966a.25.25 0 0 1 .41.192V12h6a4 4 0 0 0 3.585-5.777.5.5 0 0 1 .225-.67Z" />
-                        </svg> </button>
-                </div>
-                <div class="col barContainer">
-                    <span class="minutes">00:00</span>
-                    <div class="progress barSettings" role="progressbar" aria-label="Basic example" aria-valuenow="25"
-                        aria-valuemin="0" aria-valuemax="100">
-                        <div class="progress-bar"></div>
-                    </div>
-                    <span class="minutes">2:43</span>
-                </div>
-            </div>
-
-        </div>
-        <div class="col-3 asideContainer">
-            <button class="buttonProd"><svg xmlns="http://www.w3.org/2000/svg" width="17" height="17"
-                    fill="currentColor" class="bi bi-file-play" viewBox="0 0 16 16">
-                    <path
-                        d="M6 10.117V5.883a.5.5 0 0 1 .757-.429l3.528 2.117a.5.5 0 0 1 0 .858l-3.528 2.117a.5.5 0 0 1-.757-.43z" />
-                    <path
-                        d="M4 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2zm0 1h8a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1" />
-                </svg></button>
-            <button class="buttonProd"><svg xmlns="http://www.w3.org/2000/svg" width="17" height="17"
-                    fill="currentColor" class="bi bi-mic" viewBox="0 0 16 16">
-                    <path
-                        d="M3.5 6.5A.5.5 0 0 1 4 7v1a4 4 0 0 0 8 0V7a.5.5 0 0 1 1 0v1a5 5 0 0 1-4.5 4.975V15h3a.5.5 0 0 1 0 1h-7a.5.5 0 0 1 0-1h3v-2.025A5 5 0 0 1 3 8V7a.5.5 0 0 1 .5-.5" />
-                    <path d="M10 8a2 2 0 1 1-4 0V3a2 2 0 1 1 4 0zM8 0a3 3 0 0 0-3 3v5a3 3 0 0 0 6 0V3a3 3 0 0 0-3-3" />
-                </svg></button>
-            <button class="buttonProd"><svg xmlns="http://www.w3.org/2000/svg" width="17" height="17"
-                    fill="currentColor" class="bi bi-view-list" viewBox="0 0 16 16">
-                    <path
-                        d="M3 4.5h10a2 2 0 0 1 2 2v3a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2v-3a2 2 0 0 1 2-2m0 1a1 1 0 0 0-1 1v3a1 1 0 0 0 1 1h10a1 1 0 0 0 1-1v-3a1 1 0 0 0-1-1zM1 2a.5.5 0 0 1 .5-.5h13a.5.5 0 0 1 0 1h-13A.5.5 0 0 1 1 2m0 12a.5.5 0 0 1 .5-.5h13a.5.5 0 0 1 0 1h-13A.5.5 0 0 1 1 14" />
-                </svg></button>
-            <button class="buttonProd"><svg xmlns="http://www.w3.org/2000/svg" width="17" height="17"
-                    fill="currentColor" class="bi bi-speaker" viewBox="0 0 16 16">
-                    <path
-                        d="M12 1a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1zM4 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2z" />
-                    <path
-                        d="M8 4.75a.75.75 0 1 1 0-1.5.75.75 0 0 1 0 1.5M8 6a2 2 0 1 0 0-4 2 2 0 0 0 0 4m0 3a1.5 1.5 0 1 0 0 3 1.5 1.5 0 0 0 0-3m-3.5 1.5a3.5 3.5 0 1 1 7 0 3.5 3.5 0 0 1-7 0" />
-                </svg></button>
-            <button class="buttonProd"><svg xmlns="http://www.w3.org/2000/svg" width="25" height="25"
-                    fill="currentColor" class="bi bi-volume-down" viewBox="0 0 16 16">
-                    <path
-                        d="M9 4a.5.5 0 0 0-.812-.39L5.825 5.5H3.5A.5.5 0 0 0 3 6v4a.5.5 0 0 0 .5.5h2.325l2.363 1.89A.5.5 0 0 0 9 12zM6.312 6.39 8 5.04v5.92L6.312 9.61A.5.5 0 0 0 6 9.5H4v-3h2a.5.5 0 0 0 .312-.11M12.025 8a4.5 4.5 0 0 1-1.318 3.182L10 10.475A3.5 3.5 0 0 0 11.025 8 3.5 3.5 0 0 0 10 5.525l.707-.707A4.5 4.5 0 0 1 12.025 8" />
-                </svg></button>
-            <input type="range" name="" id="volumeRange">
-            <button class="buttonProd"><svg xmlns="http://www.w3.org/2000/svg" width="15" height="15"
-                    fill="currentColor" class="bi bi-arrows-angle-expand" viewBox="0 0 16 16">
-                    <path fill-rule="evenodd"
-                        d="M5.828 10.172a.5.5 0 0 0-.707 0l-4.096 4.096V11.5a.5.5 0 0 0-1 0v3.975a.5.5 0 0 0 .5.5H4.5a.5.5 0 0 0 0-1H1.732l4.096-4.096a.5.5 0 0 0 0-.707m4.344-4.344a.5.5 0 0 0 .707 0l4.096-4.096V4.5a.5.5 0 1 0 1 0V.525a.5.5 0 0 0-.5-.5H11.5a.5.5 0 0 0 0 1h2.768l-4.096 4.096a.5.5 0 0 0 0 .707" />
-                </svg></button>
-        </div>
-    </div>
-</div>
-
-
-
-
-
-
-<script src="./node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
-<script src="./js/script.js"></script>
-</body>
-
+        <script src="./node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+        <script src="./js/script.js"></script>
+    </body>
 </html>
