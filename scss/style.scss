@@ -1,7 +1,7 @@
 @import "../node_modules/bootstrap/scss/bootstrap.scss";
-@import "../scss/album";
-@import "../scss/home";
-@import "../scss/artist";
+@import "album";
+@import "home";
+@import "artist";
 
 body {
     font-family: "Circular", sans-serif;
