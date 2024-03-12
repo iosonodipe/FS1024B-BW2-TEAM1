@@ -11844,6 +11844,10 @@ textarea.form-control-lg {
     display: none !important;
   }
 }
+#background-artist {
+  background-image: url("https://www.ansa.it/webimages/news_base/2024/2/14/1ce6abf9b1646176026963a4e1f9e84f.jpg");
+}
+
 body {
   font-family: "Circular", sans-serif;
   background-color: black;
