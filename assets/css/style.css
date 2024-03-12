@@ -11847,6 +11847,7 @@ textarea.form-control-lg {
 body {
   font-family: "Circular", sans-serif;
   background-color: black;
+  color: white;
 }
 
 * {
@@ -11859,11 +11860,13 @@ body {
   padding: 20px;
   width: 280px;
 }
-.grey-container a, .grey-container .plus {
+.grey-container a,
+.grey-container .plus {
   text-decoration: none;
   color: grey;
 }
-.grey-container a:hover, .grey-container .plus:hover {
+.grey-container a:hover,
+.grey-container .plus:hover {
   color: white;
 }
 
@@ -11871,12 +11874,76 @@ body {
   font-weight: 700;
   display: block;
 }
-.bold span, .bold i {
+.bold span,
+.bold i {
   vertical-align: middle;
 }
 
-.resize {
-  resize: horizontal;
+.pill {
+  background-color: #282828;
+  border: 0;
+  border-radius: 1rem;
+  padding: 4px 10px;
+  font-size: 0.9rem;
+  color: white;
+}
+.pill:hover {
+  background-color: #313031;
+}
+
+.playlist-library {
+  height: calc(100vh - 345px);
+  overflow-y: hidden;
+}
+.playlist-library:hover {
+  overflow-y: scroll;
+}
+
+.playlist-image {
+  width: 50px;
+  border-radius: 3px;
+}
+
+.element {
+  padding: 6px;
+}
+.element:hover {
+  background-color: #313031;
+}
+.element .element-text span {
+  font-size: 1rem;
+}
+.element .element-text .info {
+  color: grey;
+  font-size: 0.8rem;
+}
+
+.music-player {
+  background-color: white;
+  height: 72px;
+  width: 100%;
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #121212;
+}
+
+::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  background-color: grey;
+}
+
+header {
+  background-color: #66666A;
+}
+header button {
+  background-color: rgba(61, 61, 63, 0.6);
+  border-radius: 50%;
+  border: none;
 }
 
 /*# sourceMappingURL=style.css.map */

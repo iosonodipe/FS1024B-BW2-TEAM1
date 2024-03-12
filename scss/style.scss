@@ -1,9 +1,9 @@
 @import "../node_modules/bootstrap/scss/bootstrap.scss";
 
-
 body {
     font-family: "Circular", sans-serif;
     background-color: black;
+    color: white;
 }
 
 * {
@@ -15,11 +15,12 @@ body {
     border-radius: 8px;
     padding: 20px;
     width: 280px;
-    a,.plus {
+    a,
+    .plus {
         text-decoration: none;
         color: grey;
         &:hover {
-        color: white;
+            color: white;
         }
     }
 }
@@ -27,11 +28,75 @@ body {
 .bold {
     font-weight: 700;
     display: block;
-    span,i {
+    span,
+    i {
         vertical-align: middle;
     }
-} 
+}
 
-.resize {
-    resize: horizontal;
+.pill {
+    background-color: #282828;
+    border: 0;
+    border-radius: 1rem;
+    padding: 4px 10px;
+    font-size: 0.9rem;
+    color: white;
+    &:hover {
+        background-color: #313031;
+    }
+}
+
+.playlist-library {
+    height: calc(100vh - 345px);
+    overflow-y: hidden;
+    // transition: all 0.5;
+    &:hover {
+        overflow-y: scroll;
+    }
+}
+
+.playlist-image {
+    width: 50px;
+    border-radius: 3px;
+}
+
+.element {
+    padding: 6px;
+    &:hover {
+        background-color: #313031;
+    }
+    .element-text {
+        span {
+            font-size: 1rem;
+        }
+        .info {
+            color: grey;
+            font-size: 0.8rem;
+        }
+    }
+}
+
+.music-player {
+    background-color: white;
+    height: 72px;
+    width: 100%;
+}
+::-webkit-scrollbar {
+    width: 8px;
+}
+::-webkit-scrollbar-track {
+    background: #121212;
+}
+::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    background-color: grey;
+}
+
+header{
+    background-color: #66666A;
+    button{
+        background-color: rgba($color: #3D3D3F, $alpha: 0.6);
+        border-radius: 50%;
+        border: none;
+    }
 }
