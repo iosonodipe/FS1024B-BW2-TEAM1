@@ -103,6 +103,10 @@ body {
     transition: all 0.4s ease;
     background-color: rgba($color: #282828, $alpha: 0.0);
     z-index: 1;
+    position: absolute;
+    right: 30;
+    width: calc(100% - 312px);
+    
     .history-arrow{
         
         color: white;
@@ -133,6 +137,7 @@ body {
     padding-bottom: 0.5rem;
     position: absolute;
     bottom: 0;
+    left: 0;
 
     .info {
         display: flex;
