@@ -23,7 +23,6 @@ function createCloneSong() {
   const template = document.querySelector("#artist-song");
   return template.content.cloneNode(true);
 }
-
 function appendClone(clone) {
   const divTarget = document.querySelector(".target-container");
   divTarget.append(clone);
@@ -32,7 +31,6 @@ function appendCloneSong(clone) {
   const divTarget = document.querySelector(".target-container-song");
   divTarget.append(clone);
 }
-
 function getArtistInfo(artista) {
   const clone = createClone();
   const artistImage = clone.querySelector("#artist-image");
@@ -43,7 +41,6 @@ function getArtistInfo(artista) {
   artistFans.innerText = `${artista.nb_fan} ascoltatori mensili`;
   appendClone(clone);
 }
-
 function getPopular(song, n) {
   for (let i = 1; i <= n; i++) {
     const clone = createCloneSong();

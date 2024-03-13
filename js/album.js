@@ -1,20 +1,18 @@
-function scrollTransition(b = "rgb(40,40,40)") {
+function scrollTransition(color = "rgb(40,40,40)") {
   const mainContent = document.querySelector(".main-content");
 
   mainContent.addEventListener("scroll", () => {
     const scrolled = mainContent.scrollTop;
     const header = document.querySelector("header");
     scrolled > 48
-      ? (header.style.backgroundColor = b)
+      ? (header.style.backgroundColor = color)
       : (header.style.backgroundColor = "transparent");
   });
 }
 
 document.onload = scrollTransition();
 
-let a = "";
-
-fetch("https://striveschool-api.herokuapp.com/api/deezer/album/75621062")
+fetch("https://striveschool-api.herokuapp.com/api/deezer/album/7563456")
   .then((response) => response.json())
   .then((album) => {
     console.log(album.tracks.data[0].preview);
@@ -58,24 +56,26 @@ function appendCloneAlbumSong(clone) {
 function getAlbumSong(album) {
   for (let i = 0; i < album.nb_tracks; i++) {
     const clone = createCloneAlbumSong();
-    const track = clone.querySelector(".track-source");
-    const titoloCanzone = clone.querySelector(".titolo-canzone");
+    const songTitle = clone.querySelector(".titolo-canzone");
     const nomeArtista = clone.querySelector(".artista-nome");
     const duration = clone.querySelector(".lunghezza-brano");
     const numeroBrano = clone.querySelector(".n-brano");
 
     numeroBrano.textContent = i + 1;
-    let song = document.querySelector('#song')
-    titoloCanzone.addEventListener("click", () => {
+    let song = document.querySelector("#song");
+    songTitle.addEventListener("click", () => {
       document.querySelector("#song").src = album.tracks.data[i].preview;
-      song.play()
+      song.play();
     });
 
-    titoloCanzone.textContent = album.tracks.data[i].title;
+    numeroBrano.style.width = "32px";
+    songTitle.style.cursor = "pointer";
+
+    songTitle.textContent = album.tracks.data[i].title;
     nomeArtista.textContent = album.tracks.data[i].artist.name;
     duration.textContent = `${Math.floor(
       album.tracks.data[i].duration / 60
-    )}:${(album.tracks.data[i].duration % 60).toFixed()} min`;
+    )}:${(album.tracks.data[i].duration % 60).toFixed().padStart(2, "0")} min`;
 
     appendCloneAlbumSong(clone);
   }
@@ -88,7 +88,9 @@ function getAlbumInfo(album) {
   const annoAlbum = clone.querySelector(".anno-album");
   const numeroBrani = clone.querySelector(".numero-brani");
   const totaleAscolto = clone.querySelector(".totale-ascolto");
+  const hashtag = clone.querySelector("#hashtag");
 
+  hashtag.style.width = "32px";
   imageAlbum.src = album.cover_medium;
   nomeAlbum.textContent = album.title;
   nomeArtista.textContent = album.contributors[0].name;
