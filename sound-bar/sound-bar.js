@@ -1,13 +1,43 @@
-
 let song = document.getElementById('song');
 let playBtn = document.querySelector('.playBtn');
 let playIcon = document.querySelector('#iconBtn');
-let progressBar = document.querySelector('#progressed')
+let progressed = document.querySelector('#progressed');
+let progressBar = document.querySelector('#progressBar');
+let minutesInit = document.querySelector('.minutesInit');
+
 
 //PROGRESS BAR//
 song.ontimeupdate = function () {
-    progressBar.style.width = Math.floor(song.currentTime * 100 / song.duration) + "%"
+    progressed.style.width = Math.floor(song.currentTime * 100 / song.duration) + "%"
 }
+
+progressBar.addEventListener('click', (e) => {
+    song.currentTime = ((e.offsetX / progressBar.offsetWidth) * song.duration)
+}
+);
+
+//AGGIORNAMENTO TEMPO// 
+let s = 0;
+let m = 0;
+
+function diomerda(e) {
+    let m = 0;
+    let s = 0;
+    for (let i = 0; i < e; i++) {
+        s++;
+        if (s >= 60) {
+            m++;
+            s = 0;
+        }
+    }
+    return (m < 10 ? "0" + m : m) + ":" + (s < 10 ? "0" + s : s);
+}
+
+function aggiornamento() {
+    minutesInit.innerText = diomerda(Math.floor(song.currentTime));
+}
+
+setInterval(aggiornamento, 1000);
 
 //PLAY/PAUSE//
 function playSong() {
