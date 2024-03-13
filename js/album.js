@@ -65,14 +65,9 @@ function getAlbumSong(album) {
     const numeroBrano = clone.querySelector(".n-brano");
 
     numeroBrano.textContent = i + 1;
-    track.textContent = album.tracks.data[i].preview;
 
     titoloCanzone.addEventListener("click", () => {
-      document.querySelector("#player").src = ""
-        ? (document.querySelector("#player").src = album.tracks.data[i].preview)
-        : (document.querySelector("#player").src = "");
       document.querySelector("#player").src = album.tracks.data[i].preview;
-      console.log(document.querySelector("#player").src);
     });
 
     titoloCanzone.textContent = album.tracks.data[i].title;
