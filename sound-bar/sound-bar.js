@@ -4,6 +4,7 @@ let playIcon = document.querySelector('#iconBtn');
 let progressed = document.querySelector('#progressed');
 let progressBar = document.querySelector('#progressBar');
 let minutesInit = document.querySelector('.minutesInit');
+let volume = document.getElementById('volumeRange')
 
 
 //PROGRESS BAR//
@@ -16,11 +17,18 @@ progressBar.addEventListener('click', (e) => {
 }
 );
 
+//VOLUME RANGE//
+
+volumeRange.addEventListener("input", (e) => {
+    song.volume = e.currentTarget.value / 100;
+});
+
+
 //AGGIORNAMENTO TEMPO// 
 let s = 0;
 let m = 0;
 
-function diomerda(e) {
+function aggiorn(e) {
     let m = 0;
     let s = 0;
     for (let i = 0; i < e; i++) {
@@ -34,7 +42,7 @@ function diomerda(e) {
 }
 
 function aggiornamento() {
-    minutesInit.innerText = diomerda(Math.floor(song.currentTime));
+    minutesInit.innerText = aggiorn(Math.floor(song.currentTime));
 }
 
 setInterval(aggiornamento, 1000);

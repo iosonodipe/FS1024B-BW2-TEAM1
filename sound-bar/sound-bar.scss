@@ -3,11 +3,11 @@
 
 body {
     font-family: "Circular", sans-serif;
-    background-color: black;
+    background-color: white;
 }
 
 .soundbarContainer {
-    background-color: gray;
+    background-color: black;
     height: 72px;
     padding-top: 0.5rem;
     padding-bottom: 0.5rem;
@@ -94,7 +94,7 @@ body {
         #progressBar {
             width: 30rem;
             height: 4px;
-            background: black;
+            background: gray;
             border-radius: 10px;
             cursor: pointer;
             margin-left: 5px;
@@ -125,8 +125,8 @@ body {
             }
         }
 
-        .minutes {
-            color: white;
+        .minutesInit, .minutesFinal {
+            color: rgb(200, 200, 200);
             font-size: 13px;
         }
 
@@ -142,6 +142,22 @@ body {
         display: flex;
         justify-content: end;
         align-items: center;
+
+        input[type= "range"]{
+            -webkit-appearance: none;
+            background-color: gray;
+            height: 4px;
+            border-radius: 10px;
+            cursor: pointer;
+            &::-webkit-slider-thumb {
+                -webkit-appearance: none;
+                height: 15px;
+                width: 15px;
+                background-color: white;
+                border-radius: 100%;
+            }
+
+        }
 
         .buttonProd {
             background-color: transparent;
