@@ -4,9 +4,7 @@ function scrollTransition(b = "rgb(40,40,40)") {
   mainContent.addEventListener("scroll", () => {
     const scrolled = mainContent.scrollTop;
     const header = document.querySelector("header");
-    scrolled > 48
-      ? (header.style.backgroundColor = b)
-      : (header.style.backgroundColor = "transparent");
+    scrolled > 48 ? (header.style.backgroundColor = b) : (header.style.backgroundColor = "transparent");
   });
 }
 
@@ -17,12 +15,16 @@ let a = "";
 fetch("https://striveschool-api.herokuapp.com/api/deezer/album/7565656")
   .then((response) => response.json())
   .then((album) => {
+    console.log(album.tracks.data[0].preview);
     console.log(album.tracks.data[0].title);
     console.log(document.querySelector(".target-container-song"));
     getAlbumInfo(album);
     getAlbumSong(album);
-    const fac = new FastAverageColor();
 
+    const track = document.querySelectorAll(".track-source");
+    console.log(track);
+
+    const fac = new FastAverageColor();
     fac
       .getColorAsync(album.cover_medium)
       .then((color) => {
@@ -57,17 +59,18 @@ function appendCloneAlbumSong(clone) {
 function getAlbumSong(album) {
   for (let i = 0; i < album.nb_tracks; i++) {
     const clone = createCloneAlbumSong();
+    const track = clone.querySelector(".track-source");
     const titoloCanzone = clone.querySelector(".titolo-canzone");
     const nomeArtista = clone.querySelector(".artista-nome");
     const duration = clone.querySelector(".lunghezza-brano");
     const numeroBrano = clone.querySelector(".n-brano");
 
     numeroBrano.textContent = i + 1;
+    track.textContent = album.tracks.data[i].preview;
+
     titoloCanzone.textContent = album.tracks.data[i].title;
     nomeArtista.textContent = album.tracks.data[i].artist.name;
-    duration.textContent = `${Math.floor(
-      album.tracks.data[i].duration / 60
-    )}:${(album.tracks.data[i].duration % 60).toFixed()} min`;
+    duration.textContent = `${Math.floor(album.tracks.data[i].duration / 60)}:${(album.tracks.data[i].duration % 60).toFixed()} min`;
 
     appendCloneAlbumSong(clone);
   }
@@ -86,10 +89,6 @@ function getAlbumInfo(album) {
   nomeArtista.textContent = album.contributors[0].name;
   annoAlbum.textContent = album.release_date;
   numeroBrani.textContent = `${album.nb_tracks} Brani in Totale`;
-  totaleAscolto.textContent = `Totale ascolto: ${(
-    Math.floor(album.duration) /
-    60 /
-    60
-  ).toFixed()}:${album.duration % 60} Ore `;
+  totaleAscolto.textContent = `Totale ascolto: ${(Math.floor(album.duration) / 60 / 60).toFixed()}:${album.duration % 60} Ore `;
   appendCloneAlbumInfo(clone);
 }
