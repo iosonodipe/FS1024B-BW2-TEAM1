@@ -14,7 +14,7 @@ document.onload = scrollTransition();
 
 let a = "";
 
-fetch("https://striveschool-api.herokuapp.com/api/deezer/album/7565656")
+fetch("https://striveschool-api.herokuapp.com/api/deezer/album/75621062")
   .then((response) => response.json())
   .then((album) => {
     console.log(album.tracks.data[0].preview);
@@ -68,8 +68,11 @@ function getAlbumSong(album) {
     track.textContent = album.tracks.data[i].preview;
 
     titoloCanzone.addEventListener("click", () => {
+      document.querySelector("#player").src = ""
+        ? (document.querySelector("#player").src = album.tracks.data[i].preview)
+        : (document.querySelector("#player").src = "");
       document.querySelector("#player").src = album.tracks.data[i].preview;
-      console.log(album.tracks.data[i].preview);
+      console.log(document.querySelector("#player").src);
     });
 
     titoloCanzone.textContent = album.tracks.data[i].title;
