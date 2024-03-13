@@ -49,16 +49,12 @@ setInterval(aggiornamento, 1000);
 function playSong() {
   playIcon.classList.add("bi-pause-circle-fill");
   playIcon.classList.remove("bi-play-circle-fill");
-  if (song.paused) {
-    song.play();
-  }
+  song.play();
 }
 function pauseSong() {
   playIcon.classList.remove("bi-pause-circle-fill");
   playIcon.classList.add("bi-play-circle-fill");
-  if (!song.paused) {
-    song.pause();
-  }
+  song.pause();
 }
 playBtn.addEventListener("click", () => {
   const songProd = playIcon.classList.contains("bi-play-circle-fill");
