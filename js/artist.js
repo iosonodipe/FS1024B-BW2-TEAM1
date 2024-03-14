@@ -3,6 +3,10 @@ fetch(`https://striveschool-api.herokuapp.com/api/deezer/artist/412`)
   .then((artista) => {
     console.log(artista);
     getArtistInfo(artista);
+    let artistFans = document.getElementById("artist-fans");
+    let parts = artistFans.innerHTML.split(".");
+    parts[0] = parts[0].replace(/\B(?=(\d{3})+(?!\d))/g, ".");
+    artistFans.innerHTML = parts.join(",");
   });
 
 fetch(
@@ -22,6 +26,11 @@ fetch(
       parts[0] = parts[0].replace(/\B(?=(\d{3})+(?!\d))/g, ".");
       el.innerHTML = parts.join(",");
     });
+
+    let artistFans = document.getElementById("artistFans");
+    let parts = artistFans.innerHTML.split(".");
+    parts[0] = parts[0].replace(/\B(?=(\d{3})+(?!\d))/g, ".");
+    artistFans.innerHTML = parts.join(",");
   });
 
 function createClone() {
@@ -49,7 +58,7 @@ function getArtistInfo(artista) {
   const artistName = clone.querySelector("#artist-name");
   artistName.innerText = artista.name;
   const artistFans = clone.querySelector("#artist-fans");
-  artistFans.innerText = `${artista.nb_fan} ascoltatori mensili`;
+  artistFans.innerText = `${artista.nb_fan}`;
   appendClone(clone);
 }
 function getPopular(song, n) {
@@ -66,9 +75,11 @@ function getPopular(song, n) {
     trackImage.src = song.data[i].album.cover_small;
     trackTitle.innerText = song.data[i].title;
     trackReplays.innerText = song.data[i].rank;
-    trackDuration.innerText = `${Math.floor(song.data[i].duration / 60)}:${
+    trackDuration.innerText = `${Math.floor(song.data[i].duration / 60)}:${(
       song.data[i].duration % 60
-    } min `;
+    )
+      .toFixed()
+      .padStart(2, "0")} min`;
     appendCloneSong(clone);
   }
 }
