@@ -5,6 +5,21 @@ let progressed = document.querySelector("#progressed");
 let progressBar = document.querySelector("#progressBar");
 let minutesInit = document.querySelector(".minutesInit");
 let volume = document.getElementById("volumeRange");
+let heart = document.querySelector('.heart')
+
+function changeColor() {
+  heart.addEventListener('click', () => {
+    if(heart.classList.contains('bi-heart')){
+      heart.classList.remove('bi-heart');
+      heart.classList.add('bi-heart-fill')
+      heart.style.color = "green"
+    } else if (heart.classList.contains('bi-heart-fill')) {
+      heart.classList.remove('bi-heart-fill')
+      heart.classList.add('bi-heart');
+      heart.style.color = "white"
+    }
+  })
+}
 
 //PROGRESS BAR//
 song.ontimeupdate = function () {

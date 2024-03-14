@@ -37,6 +37,7 @@ fetch("https://striveschool-api.herokuapp.com/api/deezer/album/75621062")
       .catch((e) => {
         console.log(e);
       });
+
   });
 
 function createCloneAlbum() {
@@ -71,6 +72,16 @@ function getAlbumSong(album) {
       song.play()
     });
 
+    const playPauseSong = clone.querySelector('.playPauseSong')
+
+    playPauseSong.addEventListener('click', () => {
+      if (playIcon.classList.contains("bi-play-circle-fill")) {
+        playIcon.classList.remove("bi-play-circle-fill");
+        playIcon.classList.add("bi-pause-circle-fill");
+      }
+    });
+
+
     titoloCanzone.textContent = album.tracks.data[i].title;
     nomeArtista.textContent = album.tracks.data[i].artist.name;
     duration.textContent = `${Math.floor(
@@ -101,3 +112,5 @@ function getAlbumInfo(album) {
   ).toFixed()}:${album.duration % 60} Ore `;
   appendCloneAlbumInfo(clone);
 }
+
+console.log(artist.content)
