@@ -47,6 +47,16 @@ body {
     color: white;
     &:hover {
         background-color: #313031;
+        color: #fff;
+    }
+}
+
+.pill-selected{
+    background-color: #fff;
+    color: #000;
+    &:hover {
+        background-color: #fff;
+        color: #000;
     }
 }
 
