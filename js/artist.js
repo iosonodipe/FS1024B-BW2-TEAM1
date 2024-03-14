@@ -13,6 +13,15 @@ fetch(
     console.log(song.data[0]);
     // console.log(album.track);
     getPopular(song, 8);
+    appendUnderLikedSongs();
+
+    let replays = document.querySelectorAll(".track-replays");
+
+    replays.forEach((el) => {
+      var parts = el.innerHTML.split(".");
+      parts[0] = parts[0].replace(/\B(?=(\d{3})+(?!\d))/g, ".");
+      el.innerHTML = parts.join(",");
+    });
   });
 
 function createClone() {
@@ -36,15 +45,16 @@ function appendCloneSong(clone) {
 function getArtistInfo(artista) {
   const clone = createClone();
   const artistImage = clone.querySelector("#artist-image");
-  artistImage.style.backgroundImage = `url(${artista.picture_big})`;
+  artistImage.style.backgroundImage = `url(${artista.picture_xl})`;
   const artistName = clone.querySelector("#artist-name");
   artistName.innerText = artista.name;
   const artistFans = clone.querySelector("#artist-fans");
   artistFans.innerText = `${artista.nb_fan} ascoltatori mensili`;
   appendClone(clone);
 }
-
 function getPopular(song, n) {
+  const template = document.querySelector("#under-liked-song");
+  const pippo = template.content.cloneNode(true);
   for (let i = 1; i <= n; i++) {
     const clone = createCloneSong();
     const trackRank = clone.querySelector(".track-rank");
@@ -61,4 +71,10 @@ function getPopular(song, n) {
     } min `;
     appendCloneSong(clone);
   }
+}
+
+function appendUnderLikedSongs() {
+  const template = document.querySelector("#under-liked-song");
+  const pippo = template.content.cloneNode(true);
+  document.querySelector(".row.artist-songs").append(pippo);
 }

@@ -11957,9 +11957,13 @@ ol {
 }
 
 .liked-songs-image {
-  width: 5rem;
-  height: 5rem;
+  width: 4rem;
+  height: 4rem;
   border-radius: 50%;
+}
+
+.row.artist-songs.align-content-center {
+  height: 64px;
 }
 
 .soundbarContainer {
