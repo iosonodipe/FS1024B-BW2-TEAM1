@@ -11901,6 +11901,9 @@ ol {
   font-size: 0.9rem;
   color: gray;
 }
+.card:hover {
+  background-color: rgba(108, 108, 110, 0.5);
+}
 
 .card-square {
   padding: 15px;
