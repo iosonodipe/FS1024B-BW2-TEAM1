@@ -12,32 +12,36 @@ function scrollTransition(b = "rgb(40,40,40)") {
 
 document.onload = scrollTransition();
 
-let a = "";
+let a = ''
 
-// fetch("https://striveschool-api.herokuapp.com/api/deezer/album/75621062")
-//   .then((response) => response.json())
-//   .then((album) => {
-//     console.log(album.tracks.data[0].preview);
-//     console.log(album.tracks.data[0].title);
-//     console.log(document.querySelector(".target-container-song"));
-//     getAlbumInfo(album);
-//     getAlbumSong(album);
+function fetchAlbum() {
+fetch("https://striveschool-api.herokuapp.com/api/deezer/album/75621062")
+  .then((response) => response.json())
+  .then((album) => {
+    console.log(album.tracks.data[0].preview);
+    console.log(album.tracks.data[0].title);
+    console.log(document.querySelector(".target-container-song"));
+    getAlbumInfo(album);
+    getAlbumSong(album);
 
-//     const fac = new FastAverageColor();
-//     fac
-//       .getColorAsync(album.cover_medium)
-//       .then((color) => {
-//         let container = document.querySelector(".container-info-album");
-//         container.style.backgroundColor = color.rgba;
-//         container.style.color = color.isDark ? "#fff" : "#000";
-//         a = color.rgba;
-//         scrollTransition(a);
-//         console.log("Average color", color.rgba);
-//       })
-//       .catch((e) => {
-//         console.log(e);
-//       });
-//   });
+    const fac = new FastAverageColor();
+    fac
+      .getColorAsync(album.cover_medium)
+      .then((color) => {
+        let container = document.querySelector(".container-info-album");
+        container.style.backgroundColor = color.rgba;
+        container.style.color = color.isDark ? "#fff" : "#000";
+        a = color.rgba;
+        scrollTransition(a);
+        console.log("Average color", color.rgba);
+      })
+      .catch((e) => {
+        console.log(e);
+      });
+  });
+}
+
+export {fetchAlbum}
 
 function createCloneAlbum() {
   const template = document.querySelector("#album");

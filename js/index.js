@@ -1,7 +1,10 @@
-const albumId = [75621, 756222, 756233, 756242, 75626, 75627, 75628, 75629, 7562111, 756245, 75621062, 756284, 756238, 756225, 75622, 75623, 756235, 756220, 756221];
+import {isPage} from './fetch.js'
+import * as artistJs from './artist.js'
+import * as albumJs from './album.js'
 
 const pillArtist = document.querySelector(".pill-artist");
 const pillAlbum = document.querySelector(".pill-album");
+
 
 function createClone(id) {
   const template = document.querySelector(`#${id}`);
@@ -13,7 +16,13 @@ function appendClone(clone, id) {
   divTarget.append(clone);
 }
 
+function emptyTargetDivs(classe) {
+  const div = document.querySelector(`.${classe}`)
+  div.innerHTML = ''
+}
+
 function sideAlbum() {
+  const albumId = [75621, 756222, 756233, 756242, 75626, 75627, 75628, 75629, 7562111, 756245, 75621062, 756284, 756238, 756225, 75622, 75623, 756235, 756220, 756221];
   pillAlbum.classList.add("pill-selected");
 
   albumId.forEach((albumId) => {
@@ -29,18 +38,19 @@ function sideAlbum() {
 }
 // sideAlbum();
 
-function sideArtist() {
-  const artistId = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 13, 14, 15, 16];
-  pillArtist.classList.add("pill-selected");
+  function sideArtist() {
+    const artistId = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 13, 14, 15, 16];
+    pillArtist.classList.add("pill-selected");
+  
+    artistId.forEach((artId) => {
+      fetch(`https://striveschool-api.herokuapp.com/api/deezer/artist/${artId}`)
+        .then((response) => response.json())
+        .then((artist) => {
+          artistClone(artist);
+        });
+    });
+  }
 
-  artistId.forEach((artId) => {
-    fetch(`https://striveschool-api.herokuapp.com/api/deezer/artist/${artId}`)
-      .then((response) => response.json())
-      .then((artist) => {
-        artistClone(artist);
-      });
-  });
-}
 sideArtist();
 
 function albumClone(album) {
@@ -58,10 +68,14 @@ function albumClone(album) {
 
 function artistClone(artist) {
   const clone = createClone("left-menu");
+  const element = clone.querySelector('.element')
   const artistImage = clone.querySelector(".playlist-image");
   const artistName = clone.querySelector(".playlist-name");
   const artistArtist = clone.querySelector(".playlist-artist");
 
+  element.addEventListener('click', function () {
+    cambioPagina(artist.id, 'album')
+  })
   artistImage.src = artist.picture_small;
   artistName.innerText = artist.name;
   artistArtist.innerText = "";
@@ -79,9 +93,30 @@ pillAlbum.addEventListener("click", function () {
   pillArtist.classList.remove("pill-selected");
 });
 
+// function cambioPagina(id, ogg) {
+//   const url = new URL(location.href);
+//   console.log(url);
+//   url.set(ogg, id) 
+//   console.log(url);
+//   // `?${ogg}` + `id=${id}`;
+//   // if (url.has(`${ogg}`)) console.log(url);
+// }
+
 function cambioPagina(id, ogg) {
-  location.href = `?${ogg}` + `id=${id}`;
-  const url = new URLSearchParams(location.search);
-  if (url.has(`${ogg}`)) console.log(url);
+  // const urlParams = new URLSearchParams(location.search);
+  // urlParams.set(ogg, id);
+  const url = new URL(location.href)
+  const newUrl = url.searchParams.append(ogg, id)
+  // const nuovoUrl = `${location.pathname}?${urlParams.toString()}`;
+  // console.log(nuovoUrl);
+  // is pase risulta false perchè sembra che le due righe sopra non aggiungano il query param nell'url
+  if (isPage('album')) {
+    emptyTargetDivs('target-container')
+    emptyTargetDivs('target-container-song')
+    emptyTargetDivs('target-container-playlist')
+    emptyTargetDivs('target-container-artist')
+    emptyTargetDivs('target-container-album')
+    albumJs.fetchAlbum();
+  } else console.log('isPage è false');
 }
-// cambioPagina();
+// cambioPagina(40, 'artist');

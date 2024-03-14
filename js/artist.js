@@ -1,3 +1,4 @@
+function fetchArtist() {
 fetch(`https://striveschool-api.herokuapp.com/api/deezer/artist/412`)
   .then((response) => response.json())
   .then((artista) => {
@@ -14,6 +15,9 @@ fetch(
     // console.log(album.track);
     getPopular(song, 8);
   });
+}
+
+export{fetchArtist};
 
 function createClone() {
   const template = document.querySelector("#artist");
