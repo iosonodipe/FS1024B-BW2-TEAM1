@@ -1,4 +1,5 @@
-fetch(`https://striveschool-api.herokuapp.com/api/deezer/artist/412`)
+export function fetchArtist(id) {
+fetch(`https://striveschool-api.herokuapp.com/api/deezer/artist/${id}`)
   .then((response) => response.json())
   .then((artista) => {
     console.log(artista);
@@ -10,7 +11,7 @@ fetch(`https://striveschool-api.herokuapp.com/api/deezer/artist/412`)
   });
 
 fetch(
-  `https://striveschool-api.herokuapp.com/api/deezer/artist/412/top?limit=50`
+  `https://striveschool-api.herokuapp.com/api/deezer/artist/${id}/top?limit=50`
 )
   .then((response) => response.json())
   .then((song) => {
@@ -32,6 +33,7 @@ fetch(
     parts[0] = parts[0].replace(/\B(?=(\d{3})+(?!\d))/g, ".");
     artistFans.innerHTML = parts.join(",");
   });
+}
 
 function createClone() {
   const template = document.querySelector("#artist");

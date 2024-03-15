@@ -12159,6 +12159,16 @@ body {
 }
 .pill:hover {
   background-color: #313031;
+  color: #fff;
+}
+
+.pill-selected {
+  background-color: #fff;
+  color: #000;
+}
+.pill-selected:hover {
+  background-color: #fff;
+  color: #000;
 }
 
 .playlist-library {
