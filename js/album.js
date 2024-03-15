@@ -20,9 +20,6 @@ export function fetchAlbum(id) {
 fetch(`https://striveschool-api.herokuapp.com/api/deezer/album/${id}`)
   .then((response) => response.json())
   .then((album) => {
-    console.log(album.tracks.data[0].preview);
-    console.log(album.tracks.data[0].title);
-    console.log(document.querySelector(".target-container-song"));
     getAlbumInfo(album);
     getAlbumSong(album);
 
@@ -36,11 +33,11 @@ fetch(`https://striveschool-api.herokuapp.com/api/deezer/album/${id}`)
         container.style.color = color.isDark ? "#fff" : "#000";
         a = color.rgba;
         scrollTransition(a);
-        console.log("Average color", color.rgba);
       })
       .catch((e) => {
         console.log(e);
       });
+
   });
 }
 
@@ -61,6 +58,62 @@ function appendCloneAlbumSong(clone) {
   divTarget.append(clone);
 }
 function getAlbumSong(album) {
+
+  //FUNZIONAMENTO BACK AND FORWARD BUTTON//
+  let songs = [];
+  let songIndex = 0;
+  const backBtn = document.querySelector('.backBtn');
+  const forwardBtn = document.querySelector('.forwardBtn');
+  console.log(songs)
+
+  //RIEMPIMENTO ARRAY//
+
+  function array() {
+    album.tracks.data.forEach(element => {
+      let songFn = element.preview
+      songs.push(songFn)
+      return songs;
+    })
+  }
+  array()
+
+  /////////////////////
+
+  function prevSong() {
+    let song = document.querySelector("#song");
+
+    if (songIndex <= 0) {
+      songIndex = songs.length - 1
+    } else {
+      songIndex--
+    }
+
+    song.src = album.tracks.data[songIndex].preview;
+
+    song.play()
+
+  };
+  function forwardSong() {
+    let song = document.querySelector("#song");
+
+    if (songIndex >= songs.length - 1) {
+      songIndex = 0
+    } else {
+      songIndex++
+    }
+
+    song.src = album.tracks.data[songIndex].preview;
+
+    
+  }
+
+
+  backBtn.addEventListener('click', prevSong);
+  forwardBtn.addEventListener('click', forwardSong);
+
+  //////////////////////////////////////////
+  
+
   for (let i = 0; i < album.nb_tracks; i++) {
     const clone = createCloneAlbumSong();
     const track = clone.querySelector(".track-source");
@@ -68,13 +121,28 @@ function getAlbumSong(album) {
     const nomeArtista = clone.querySelector(".artista-nome");
     const duration = clone.querySelector(".lunghezza-brano");
     const numeroBrano = clone.querySelector(".n-brano");
+    
 
     numeroBrano.textContent = i + 1;
     let song = document.querySelector('#song')
     titoloCanzone.addEventListener("click", () => {
       document.querySelector("#song").src = album.tracks.data[i].preview;
+      songIndex = numeroBrano.innerText -1;
       song.play()
+      
     });
+
+    
+
+    const playPauseSong = clone.querySelector('.playPauseSong')
+
+    playPauseSong.addEventListener('click', () => {
+      if (playIcon.classList.contains("bi-play-circle-fill")) {
+        playIcon.classList.remove("bi-play-circle-fill");
+        playIcon.classList.add("bi-pause-circle-fill");
+      }
+    });
+
 
     titoloCanzone.textContent = album.tracks.data[i].title;
     nomeArtista.textContent = album.tracks.data[i].artist.name;
