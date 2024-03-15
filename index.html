@@ -16,7 +16,7 @@
                 <div class="row flex-column resize">
                     <div class="col grey-container main-menu">
                         <div class="bold">
-                            <a class="flex-bold" href=""
+                            <a class="flex-bold home" href=""
                                 ><i class="bi bi-house-door h4 me-3"></i
                                 ><span>Home</span></a
                             >
@@ -120,20 +120,26 @@
                         class="target-container-playlist row mx-0 row-gap-3 mt-5 pt-5"
                     ></div>
                     <div
-                        class="target-container-artist row row-gap-3 mx-0 d-none"
+                        class="target-container-artist d-none"
                     >
-                        <div class="artists px-3 mt-5">
+                        <div class="artists mt-5">
                             <div class="">
-                                <h3 class="fw-bold">Artisti</h3>
+                                <h3 class="fw-bold px-3">Artisti</h3>
+                                <div class="target-artist row row-gap-3 mx-0">
+
+                                </div>
                             </div>
                         </div>
                     </div>
                     <div
-                        class="target-container-album row row-gap-3 mx-0 d-none mb-5"
+                        class="target-container-album d-none mb-5"
                     >
-                        <div class="albums px-3 mt-5">
+                        <div class="albums mt-5">
                             <div class="">
-                                <h3 class="fw-bold">Albums</h3>
+                                <h3 class="fw-bold px-3">Albums</h3>
+                                <div class="target-album row row-gap-3 mx-0">
+
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -720,10 +726,10 @@
 
         <script src="./node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
         <script src="https://unpkg.com/fast-average-color/dist/index.browser.min.js"></script>
-        <script src="./js/script.js"></script>
-        <script src="./js/album.js"></script>
-        <script src="./js/soundbar.js"></script>
-        <script src="./js/home.js"></script>
+        <script type="module" src="./js/script.js"></script>
+        <script type="module" src="./js/album.js"></script>
+        <script type="module" src="./js/soundbar.js"></script>
+        <script type="module" src="./js/home.js"></script>
         <script type="module" src="./js/index.js"></script>
     </body>
 </html>

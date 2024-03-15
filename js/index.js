@@ -2,11 +2,28 @@ import { isPage } from "./fetch.js";
 import { fetchArtist } from "./artist.js";
 import { fetchAlbum } from "./album.js";
 import { fillHomePage } from "./home.js";
+import { isHomePage } from "./fetch.js";
 
 const pillArtist = document.querySelector(".pill-artist");
 const pillAlbum = document.querySelector(".pill-album");
 
-document.onload = fillHomePage();
+const homeButton = document.querySelector('.home');
+homeButton.addEventListener('click', function(e) {
+  e.preventDefault()
+  if (!isHomePage) {
+    emptyTargetDivs("target-container");
+    emptyTargetDivs("target-container-song");
+    emptyTargetDivs("target-container-playlist");
+    // emptyTargetDivs("target-container-artist");
+    // emptyTargetDivs("target-container-album");
+    fillHomePage();
+  }
+})
+
+
+if (!isHomePage) {
+  fillHomePage()
+}
 
 function createClone(id) {
     const template = document.querySelector(`#${id}`);
@@ -116,21 +133,14 @@ pillAlbum.addEventListener("click", function () {
     }
 });
 
-// function cambioPagina(id, ogg) {
-//   const url = new URL(location.href);
-//   console.log(url);
-//   url.set(ogg, id)
-//   console.log(url);
-//   // `?${ogg}` + `id=${id}`;
-//   // if (url.has(`${ogg}`)) console.log(url);
-// }
-
 function loadArtistFetch(id) {
     emptyTargetDivs("target-container");
     emptyTargetDivs("target-container-song");
     emptyTargetDivs("target-container-playlist");
-    emptyTargetDivs("target-container-artist");
-    emptyTargetDivs("target-container-album");
+    emptyTargetDivs("target-artist");
+    emptyTargetDivs("target-album");
+    toggleDisplayNone('target-container-album')
+    toggleDisplayNone('target-container-artist')
     fetchArtist(id);
 }
 
@@ -138,26 +148,13 @@ function loadAlbumFetch(id) {
     emptyTargetDivs("target-container");
     emptyTargetDivs("target-container-song");
     emptyTargetDivs("target-container-playlist");
-    emptyTargetDivs("target-container-artist");
-    emptyTargetDivs("target-container-album");
+    emptyTargetDivs("target-artist");
+    emptyTargetDivs("target-album");
+    toggleDisplayNone('target-container-album')
+    toggleDisplayNone('target-container-artist')
     fetchAlbum(id);
 }
 
-function cambioPagina(id, ogg) {
-    // const urlParams = new URLSearchParams(location.search);
-    // urlParams.set(ogg, id);
-    const url = new URL(location.href);
-    const newUrl = url.searchParams.append(ogg, id);
-    // const nuovoUrl = `${location.pathname}?${urlParams.toString()}`;
-    // console.log(nuovoUrl);
-    // is pase risulta false perchè sembra che le due righe sopra non aggiungano il query param nell'url
-    if (isPage("album")) {
-        emptyTargetDivs("target-container");
-        emptyTargetDivs("target-container-song");
-        emptyTargetDivs("target-container-playlist");
-        emptyTargetDivs("target-container-artist");
-        emptyTargetDivs("target-container-album");
-        fetchAlbum();
-    } else console.log("isPage è false");
+function toggleDisplayNone(classe) {
+  document.querySelector(`.${classe}`).classList.add("d-none");
 }
-// cambioPagina(40, 'artist');

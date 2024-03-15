@@ -1,3 +1,5 @@
+import { check } from "./fetch.js";
+
 function createClone(id) {
   const template = document.querySelector(`#${id}`);
   return template.content.cloneNode(true);
@@ -13,6 +15,7 @@ function toggleDisplayNone(classe) {
 }
 
 export function fillHomePage() {
+    check(true)
     const albumIds = [
         75621, 756222, 756233, 756242, 75626, 75627, 75628, 75629, 7562111,
         756245, 75621062, 756284, 756238, 756225, 75622, 75623, 756235, 756220,
@@ -49,7 +52,7 @@ function artistSection(album) {
   const artistName = clone.querySelector(".card-title");
   artistImage.src = album.contributors[0].picture;
   artistName.innerText = album.contributors[0].name;
-  appendClone(clone, "target-container-artist");
+  appendClone(clone, "target-artist");
 }
 
 function albumSection(album) {
@@ -60,5 +63,5 @@ function albumSection(album) {
   albumImage.src = album.cover_medium;
   albumName.innerText = album.title;
   albumArtist.innerText = album.contributors[0].name;
-  appendClone(clone, "target-container-album");
+  appendClone(clone, "target-album");
 }

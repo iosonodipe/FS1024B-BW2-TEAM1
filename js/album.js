@@ -1,3 +1,5 @@
+import { check } from "./fetch.js";
+
 function scrollTransition(b = "rgb(40,40,40)") {
   const mainContent = document.querySelector(".main-content");
 
@@ -14,6 +16,7 @@ document.onload = scrollTransition();
 
 
 export function fetchAlbum(id) {
+  check(false)
 fetch(`https://striveschool-api.herokuapp.com/api/deezer/album/${id}`)
   .then((response) => response.json())
   .then((album) => {

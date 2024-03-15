@@ -6,3 +6,9 @@ export function isPage(page) {
     const url = new URLSearchParams(location.search)
     return url.has(page)
 }
+
+export let isHomePage = false;
+
+export function check(newValue) {
+    isHomePage = newValue;
+}
