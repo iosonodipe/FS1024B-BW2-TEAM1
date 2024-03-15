@@ -21,13 +21,13 @@ export function fillHomePage() {
     const albumIds = [
         75621062, 103376, 423368, 82107, 595243, 288437072, 66644272, 309377597,
         249673, 533925222, 502369701, 122366, 39232941, 321004297, 96636772,
-        7533292, 212377, 72487842, 401032, 1434890,
+        7533292, 212377, 72487842, 401032, 1434890, 154545792, 508204251, 393585737, 393211667, 534017402, 556764162, 50036922, 451227145, 418842017, 110040592, 295768512
     ];
     toggleDisplayNone("target-container-artist");
     toggleDisplayNone("target-container-album");
     staticPlaylists();
     for (let i = 0; i < 6; i++) {
-        let random = Math.floor(Math.random() * 20);
+        let random = Math.floor(Math.random() * 31);
         let id = albumIds[random];
         fetch(`https://striveschool-api.herokuapp.com/api/deezer/album/${id}`)
             .then((response) => response.json())
@@ -64,7 +64,7 @@ function artistSection(album) {
     const card = clone.querySelector(".card");
     const artistImage = clone.querySelector(".card-img-top");
     const artistName = clone.querySelector(".card-title");
-    artistImage.src = album.contributors[0].picture;
+    artistImage.src = album.contributors[0].picture_big;
     artistName.innerText = album.contributors[0].name;
     card.addEventListener("click", function () {
         console.log(album.artist.id);
