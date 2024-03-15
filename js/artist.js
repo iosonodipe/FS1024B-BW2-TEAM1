@@ -45,6 +45,13 @@ function getArtistInfo(artista) {
   artistName.innerText = artista.name;
   const artistFans = clone.querySelector("#artist-fans");
   artistFans.innerText = `${artista.nb_fan} ascoltatori mensili`;
+  clone.querySelector('.green-play-button').addEventListener('click', function(){
+    alert('button')
+
+  })
+console.log(clone.querySelector('.green-play-button'));
+
+
   appendClone(clone);
 }
 
@@ -66,3 +73,25 @@ function getPopular(song, n) {
     appendCloneSong(clone);
   }
 }
+
+
+//PLAY/PAUSE/Button//
+function playSong() {
+  playIcon.classList.add("bi-pause-circle-fill");
+  playIcon.classList.remove("bi-play-circle-fill");
+  song.play();
+}
+function pauseSong() {
+  playIcon.classList.remove("bi-pause-circle-fill");
+  playIcon.classList.add("bi-play-circle-fill");
+  song.pause();
+}
+playBtn.addEventListener("click", () => {
+  const songProd = playIcon.classList.contains("bi-play-circle-fill");
+
+  if (songProd) {
+    playSong();
+  } else {
+    pauseSong();
+  }
+});
