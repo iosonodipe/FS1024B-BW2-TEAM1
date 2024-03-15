@@ -1,4 +1,6 @@
 import { check } from "./fetch.js";
+import { isHomePage } from "./fetch.js";
+
 
 export function fetchArtist(id) {
     check(false);
@@ -25,9 +27,9 @@ export function fetchArtist(id) {
                 mainContent.addEventListener("scroll", () => {
                     const scrolled = mainContent.scrollTop;
                     const header = document.querySelector("header");
-                    scrolled > 48
-                        ? (header.style.backgroundColor = a)
-                        : (header.style.backgroundColor = "transparent");
+                      scrolled > 48
+                      ? (header.style.backgroundColor = a)
+                      : (header.style.backgroundColor = "transparent");
                 });
             });
         });

@@ -1,21 +1,21 @@
 import { check } from "./fetch.js";
 
 function createClone(id) {
-  const template = document.querySelector(`#${id}`);
-  return template.content.cloneNode(true);
+    const template = document.querySelector(`#${id}`);
+    return template.content.cloneNode(true);
 }
 
 function appendClone(clone, id) {
-  const divTarget = document.querySelector(`.${id}`);
-  divTarget.append(clone);
+    const divTarget = document.querySelector(`.${id}`);
+    divTarget.append(clone);
 }
 
 function toggleDisplayNone(classe) {
-  document.querySelector(`.${classe}`).classList.remove("d-none");
+    document.querySelector(`.${classe}`).classList.remove("d-none");
 }
 
 export function fillHomePage() {
-    check(true)
+    check(true);
     const albumIds = [
         75621, 756222, 756233, 756242, 75626, 75627, 75628, 75629, 7562111,
         756245, 75621062, 756284, 756238, 756225, 75622, 75623, 756235, 756220,
@@ -32,6 +32,16 @@ export function fillHomePage() {
             .then((album) => {
                 artistSection(album);
                 albumSection(album);
+
+                const mainContent = document.querySelector(".main-content");
+
+                mainContent.addEventListener("scroll", () => {
+                    const scrolled = mainContent.scrollTop;
+                    const header = document.querySelector("header");
+                    scrolled > 48
+                        ? (header.style.backgroundColor = '#282828')
+                        : (header.style.backgroundColor = "transparent");
+                });
             })
             .catch((e) => {
                 console.log(e);
@@ -42,26 +52,26 @@ export function fillHomePage() {
 // fillHomePage();
 
 function staticPlaylists() {
-  const clone = createClone("home-playlist");
-  appendClone(clone, "target-container-playlist");
+    const clone = createClone("home-playlist");
+    appendClone(clone, "target-container-playlist");
 }
 
 function artistSection(album) {
-  const clone = createClone("home-artist");
-  const artistImage = clone.querySelector(".card-img-top");
-  const artistName = clone.querySelector(".card-title");
-  artistImage.src = album.contributors[0].picture;
-  artistName.innerText = album.contributors[0].name;
-  appendClone(clone, "target-artist");
+    const clone = createClone("home-artist");
+    const artistImage = clone.querySelector(".card-img-top");
+    const artistName = clone.querySelector(".card-title");
+    artistImage.src = album.contributors[0].picture;
+    artistName.innerText = album.contributors[0].name;
+    appendClone(clone, "target-artist");
 }
 
 function albumSection(album) {
-  const clone = createClone("home-album");
-  const albumImage = clone.querySelector(".card-img-top");
-  const albumName = clone.querySelector(".card-title");
-  const albumArtist = clone.querySelector(".card-text");
-  albumImage.src = album.cover_medium;
-  albumName.innerText = album.title;
-  albumArtist.innerText = album.contributors[0].name;
-  appendClone(clone, "target-album");
+    const clone = createClone("home-album");
+    const albumImage = clone.querySelector(".card-img-top");
+    const albumName = clone.querySelector(".card-title");
+    const albumArtist = clone.querySelector(".card-text");
+    albumImage.src = album.cover_medium;
+    albumName.innerText = album.title;
+    albumArtist.innerText = album.contributors[0].name;
+    appendClone(clone, "target-album");
 }
