@@ -84,7 +84,7 @@ function getAlbumSong(album) {
     }
 
     song.src = album.tracks.data[songIndex].preview;
-
+    soundbarArtist(songIndex)
     song.play()
 
   };
@@ -98,14 +98,25 @@ function getAlbumSong(album) {
     }
 
     song.src = album.tracks.data[songIndex].preview;
-
-    
+    soundbarArtist(songIndex)
+    song.play()
   }
 
 
   backBtn.addEventListener('click', prevSong);
   forwardBtn.addEventListener('click', forwardSong);
 
+
+
+  function soundbarArtist(songIndex){
+    let soundbarImg = document.querySelector("#copertina")
+    let soundbarTitle = document.querySelector(".song")
+    let soundbarArtist = document.querySelector(".artist")
+
+    soundbarImg.src = album.cover_small
+    soundbarTitle.innerText = album.tracks.data[songIndex].title
+    soundbarArtist.innerText = album.contributors[0].name
+  }
   //////////////////////////////////////////
   
 
@@ -123,8 +134,10 @@ function getAlbumSong(album) {
     titoloCanzone.addEventListener("click", () => {
       document.querySelector("#song").src = album.tracks.data[i].preview;
       songIndex = numeroBrano.innerText -1;
+      soundbarArtist(songIndex)
+
       song.play()
-      
+
     });
 
     
