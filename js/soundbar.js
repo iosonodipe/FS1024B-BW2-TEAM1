@@ -6,6 +6,7 @@ let progressBar = document.querySelector("#progressBar");
 let minutesInit = document.querySelector(".minutesInit");
 let volume = document.getElementById("volumeRange");
 let heart = document.querySelector('.heart')
+let songIndex = 0
 
 function changeColor() {
   heart.addEventListener('click', () => {
