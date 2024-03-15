@@ -86,6 +86,7 @@ function getAlbumSong(album) {
     song.src = album.tracks.data[songIndex].preview;
 
     song.play()
+
   };
   function forwardSong() {
     let song = document.querySelector("#song");
@@ -98,7 +99,7 @@ function getAlbumSong(album) {
 
     song.src = album.tracks.data[songIndex].preview;
 
-    song.play()
+    
   }
 
 
@@ -106,7 +107,7 @@ function getAlbumSong(album) {
   forwardBtn.addEventListener('click', forwardSong);
 
   //////////////////////////////////////////
-
+  
 
   for (let i = 0; i < album.nb_tracks; i++) {
     const clone = createCloneAlbumSong();
@@ -123,6 +124,7 @@ function getAlbumSong(album) {
       document.querySelector("#song").src = album.tracks.data[i].preview;
       songIndex = numeroBrano.innerText -1;
       song.play()
+      
     });
 
     
