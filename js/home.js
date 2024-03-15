@@ -1,4 +1,6 @@
 import { check } from "./fetch.js";
+import { fetchArtist } from "./artist.js";
+import { fetchAlbum } from "./album.js";
 
 function createClone(id) {
   const template = document.querySelector(`#${id}`);
@@ -48,20 +50,62 @@ function staticPlaylists() {
 
 function artistSection(album) {
   const clone = createClone("home-artist");
+  const card = clone.querySelector('.card')
   const artistImage = clone.querySelector(".card-img-top");
   const artistName = clone.querySelector(".card-title");
   artistImage.src = album.contributors[0].picture;
   artistName.innerText = album.contributors[0].name;
+  card.addEventListener('click', function() {
+    console.log(album.artist.id);
+    loadArtistFetch(album.artist.id)
+  })
   appendClone(clone, "target-artist");
 }
 
 function albumSection(album) {
   const clone = createClone("home-album");
+  const card = clone.querySelector('.card')
   const albumImage = clone.querySelector(".card-img-top");
   const albumName = clone.querySelector(".card-title");
   const albumArtist = clone.querySelector(".card-text");
   albumImage.src = album.cover_medium;
   albumName.innerText = album.title;
   albumArtist.innerText = album.contributors[0].name;
+  card.addEventListener('click', function() {
+    loadAlbumFetch(album.id)
+  })
   appendClone(clone, "target-album");
 }
+
+function emptyTargetDivs(classe) {
+  const div = document.querySelector(`.${classe}`);
+  div.innerHTML = "";
+}
+
+function addDisplayNone(classe) {
+  document.querySelector(`.${classe}`).classList.add("d-none");
+}
+
+function loadArtistFetch(id) {
+  emptyTargetDivs("target-container");
+  emptyTargetDivs("target-container-song");
+  emptyTargetDivs("target-container-playlist");
+  emptyTargetDivs("target-artist");
+  emptyTargetDivs("target-album");
+  addDisplayNone('target-container-album')
+  addDisplayNone('target-container-artist')
+  fetchArtist(id);
+}
+
+function loadAlbumFetch(id) {
+  emptyTargetDivs("target-container");
+  emptyTargetDivs("target-container-song");
+  emptyTargetDivs("target-container-playlist");
+  emptyTargetDivs("target-artist");
+  emptyTargetDivs("target-album");
+  addDisplayNone('target-container-album')
+  addDisplayNone('target-container-artist')
+  fetchAlbum(id);
+}
+
+
