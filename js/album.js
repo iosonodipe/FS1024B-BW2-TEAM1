@@ -156,7 +156,6 @@ function getAlbumSong(album) {
 
   for (let i = 0; i < album.nb_tracks; i++) {
     const clone = createCloneAlbumSong();
-    const track = clone.querySelector(".track-source");
     const titoloCanzone = clone.querySelector(".titolo-canzone");
     const nomeArtista = clone.querySelector(".artista-nome");
     const duration = clone.querySelector(".lunghezza-brano");
@@ -169,6 +168,7 @@ function getAlbumSong(album) {
       document.querySelector("#song").src = album.tracks.data[i].preview;
       songIndex = numeroBrano.innerText -1;
       soundbarArtist(songIndex)
+    
 
       song.play()
 

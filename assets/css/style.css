@@ -12035,6 +12035,13 @@ ol {
   background-color: transparent;
   border: none;
 }
+.soundbarContainer #likeBtn {
+  background-color: transparent;
+  border: none;
+}
+.soundbarContainer #likeBtn:hover {
+  transform: scale(1.14);
+}
 .soundbarContainer .barContainer {
   display: flex;
   justify-content: center;
@@ -12047,8 +12054,8 @@ ol {
   background: gray;
   border-radius: 10px;
   cursor: pointer;
-  margin-left: 5px;
-  margin-right: 5px;
+  margin-left: 10px;
+  margin-right: 10px;
 }
 .soundbarContainer .barContainer #progressBar:hover #progressed {
   background-color: rgb(0, 168, 0);
@@ -12087,18 +12094,11 @@ ol {
   align-items: center;
 }
 .soundbarContainer .asideContainer input[type=range] {
-  -webkit-appearance: none;
   background-color: gray;
   height: 4px;
   border-radius: 10px;
   cursor: pointer;
-}
-.soundbarContainer .asideContainer input[type=range]::-webkit-slider-thumb {
-  -webkit-appearance: none;
-  height: 15px;
-  width: 15px;
-  background-color: white;
-  border-radius: 100%;
+  accent-color: white;
 }
 .soundbarContainer .asideContainer .buttonProd {
   background-color: transparent;
