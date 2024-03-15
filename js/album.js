@@ -12,10 +12,9 @@ function scrollTransition(b = "rgb(40,40,40)") {
 
 document.onload = scrollTransition();
 
-let a = ''
 
-function fetchAlbum() {
-fetch("https://striveschool-api.herokuapp.com/api/deezer/album/75621062")
+export function fetchAlbum(id) {
+fetch(`https://striveschool-api.herokuapp.com/api/deezer/album/${id}`)
   .then((response) => response.json())
   .then((album) => {
     console.log(album.tracks.data[0].preview);
@@ -28,6 +27,7 @@ fetch("https://striveschool-api.herokuapp.com/api/deezer/album/75621062")
     fac
       .getColorAsync(album.cover_medium)
       .then((color) => {
+        let a = ''
         let container = document.querySelector(".container-info-album");
         container.style.backgroundColor = color.rgba;
         container.style.color = color.isDark ? "#fff" : "#000";
@@ -40,8 +40,6 @@ fetch("https://striveschool-api.herokuapp.com/api/deezer/album/75621062")
       });
   });
 }
-
-export {fetchAlbum}
 
 function createCloneAlbum() {
   const template = document.querySelector("#album");

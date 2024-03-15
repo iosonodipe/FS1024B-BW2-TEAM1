@@ -1,8 +1,3 @@
-const albumIds = [
-    75621, 756222, 756233, 756242, 75626, 75627, 75628, 75629, 7562111, 756245,
-    75621062, 756284, 756238, 756225, 75622, 75623, 756235, 756220, 756221,
-];
-
 function createClone(id) {
     const template = document.querySelector(`#${id}`);
     return template.content.cloneNode(true);
@@ -17,9 +12,14 @@ function toggleDisplayNone(classe) {
     document.querySelector(`.${classe}`).classList.remove("d-none");
 }
 
-function fillHomePage() {
-    toggleDisplayNone('target-container-artist')
-    toggleDisplayNone('target-container-album')
+export function fillHomePage() {
+    const albumIds = [
+        75621, 756222, 756233, 756242, 75626, 75627, 75628, 75629, 7562111,
+        756245, 75621062, 756284, 756238, 756225, 75622, 75623, 756235, 756220,
+        756221,
+    ];
+    toggleDisplayNone("target-container-artist");
+    toggleDisplayNone("target-container-album");
     staticPlaylists();
     for (let i = 0; i < 6; i++) {
         let random = Math.floor(Math.random() * 18);
@@ -28,7 +28,7 @@ function fillHomePage() {
             .then((response) => response.json())
             .then((album) => {
                 artistSection(album);
-                albumSection(album)
+                albumSection(album);
             })
             .catch((e) => {
                 console.log(e);
@@ -36,7 +36,7 @@ function fillHomePage() {
     }
 }
 
-fillHomePage();
+// fillHomePage();
 
 function staticPlaylists() {
     const clone = createClone("home-playlist");
